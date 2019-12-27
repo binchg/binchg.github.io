@@ -1,0 +1,31 @@
+body { 
+	font-size: 12px; 
+	font-family: "ËÎÌו"; 
+	background-color:#f4fffb;
+	COLOR:black;
+	SCROLLBAR-FACE-COLOR: #f4fffb; 
+	SCROLLBAR-HIGHLIGHT-COLOR: #f4fffb;
+	SCROLLBAR-SHADOW-COLOR: #f4fffb; 
+	SCROLLBAR-3DLIGHT-COLOR: #318262;
+	SCROLLBAR-ARROW-COLOR: #318262; 
+	SCROLLBAR-TRACK-COLOR: #f4fffb;
+	SCROLLBAR-DARKSHADOW-COLOR: #318262;
+}
+A {
+	TEXT-DECORATION: none; TEXT-TRANSFORM: none
+}
+A:link {
+	COLOR: #044C83; TEXT-DECORATION: none
+}
+A:visited {
+	COLOR: #173048; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #ff9900; TEXT-DECORATION: underline
+}
+BODY {
+	COLOR: #044C83; FONT-FAMILY: "ËÎÌו;Arial"; FONT-SIZE: 9pt
+}
+TD {
+	FONT-FAMILY: "ËÎÌו;Arial"; FONT-SIZE: 9pt
+}

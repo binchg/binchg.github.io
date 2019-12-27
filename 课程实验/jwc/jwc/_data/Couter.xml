@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<Counter>
+	<startTime></startTime>
+	<visitCount></visitCount>
+	<onlineNum></onlineNum>
+	<activeNum></activeNum>
+	<limitNum></limitNum>
+</Counter>

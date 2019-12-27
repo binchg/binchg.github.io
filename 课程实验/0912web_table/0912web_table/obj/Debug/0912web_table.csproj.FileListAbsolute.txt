@@ -1,0 +1,6 @@
+E:\6web\0912web_table\0912web_table\bin\0912web_table.dll.config
+E:\6web\0912web_table\0912web_table\bin\0912web_table.dll
+E:\6web\0912web_table\0912web_table\bin\0912web_table.pdb
+E:\6web\0912web_table\0912web_table\obj\Debug\0912web_table.csprojResolveAssemblyReference.cache
+E:\6web\0912web_table\0912web_table\obj\Debug\0912web_table.dll
+E:\6web\0912web_table\0912web_table\obj\Debug\0912web_table.pdb

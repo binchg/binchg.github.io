@@ -1,0 +1,6 @@
+E:\6web\cd_exp02\cd_exp02\bin\cd_exp02.dll.config
+E:\6web\cd_exp02\cd_exp02\bin\cd_exp02.dll
+E:\6web\cd_exp02\cd_exp02\bin\cd_exp02.pdb
+E:\6web\cd_exp02\cd_exp02\obj\Debug\cd_exp02.dll
+E:\6web\cd_exp02\cd_exp02\obj\Debug\cd_exp02.pdb
+E:\6web\cd_exp02\cd_exp02\obj\Debug\cd_exp02.csprojResolveAssemblyReference.cache

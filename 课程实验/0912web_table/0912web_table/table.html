@@ -1,0 +1,64 @@
+﻿<html>
+
+<head>
+    <meta http-equiv="Content-Language" content="zh-cn">
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+    <title>ÐÂ½¨ÍøÒ³ 1</title>
+</head>
+
+<script type="text/javascript">
+    function myfun() {
+
+        var mytab = document.getElementById("mytab");
+
+        NumOfRows = mytab.rows.length;
+        alert(NumOfRows);
+        for (var i = 0; i < NumOfRows; i++) {
+            mytab.rows[i].cells[2].style.backgroundColor = "green";
+
+            if (i % 2 == 0) {
+                // alert(i);
+                mytab.rows[i].style.backgroundColor = "red";
+                //mytab.rows[i].style="background-color:red;";
+                //alert(mytab.rows[i].cells[0].innerHTML);
+                //mytable.rows[0].cells.length;
+                //mytable.rows[i].cells[j].innerHTML
+
+            }
+        }
+        //var mytext = mytable.rows[9].cells[9].innerHTML;
+
+        mytab.rows[9].cells[9].style.fontSize = "30pt";
+
+    }
+
+</script>
+
+
+<body>
+
+    <table id="mytab" >
+        drawtable();
+        
+
+    </table>
+    <!--<input id="btnOK" type="button" value="OK" onclick="javascript: myfun();" />-->
+   
+    <script type="text/javascript">
+        function drawtable(){
+            for (var i = 1; i <= 1000; i++) {
+                document.write("<tr>");
+                for (var j = 1; j <= 1000; j++) {
+                    document.write("<td>");
+                    document.write(i + "," + j);
+                    document.write("</td>");
+                }
+                document.write("</tr>");
+            }
+        }
+       
+    </script>
+
+</body>
+
+</html>

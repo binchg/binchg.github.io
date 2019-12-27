@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="gb2312"?>
+<root>
+  <menu id="001">
+    <code>001</code>
+    <name>课程课表</name>
+    <linkfile>../ZNPK/LessonSel.aspx</linkfile>
+    <state>1</state>
+  </menu>
+  <menu id="002">
+    <code>002</code>
+    <name>教师课表</name>
+    <linkfile>../ZNPK/TeacherKBFB.aspx</linkfile>
+    <state>1</state>
+  </menu>
+  <menu id="003">
+    <code>003</code>
+    <name>班级课表</name>
+    <linkfile>../ZNPK/ClassSel.aspx</linkfile>
+    <state>1</state>
+  </menu>
+  <menu id="004">
+    <code>004</code>
+    <name>教室课表</name>
+    <linkfile>../ZNPK/RoomSel.aspx</linkfile>
+    <state>1</state>
+  </menu>
+  <menu id="005">
+    <code>005</code>
+    <name>任选课表</name>
+    <linkfile>../ZNPK/RXKBSel.aspx</linkfile>
+    <state>1</state>
+  </menu>
+  <menu id="006">
+    <code>006</code>
+    <name>周/日/节次课表</name>
+    <linkfile>../ZNPK/DayJCSel.aspx</linkfile>
+    <state>1</state>
+  </menu>
+</root>

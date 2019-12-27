@@ -1,0 +1,7 @@
+E:\6web\web_exp_06\web_exp_06\bin\web_exp_06.dll.config
+E:\6web\web_exp_06\web_exp_06\bin\web_exp_06.dll
+E:\6web\web_exp_06\web_exp_06\bin\web_exp_06.pdb
+E:\6web\web_exp_06\web_exp_06\bin\MySql.Data.dll
+E:\6web\web_exp_06\web_exp_06\obj\Debug\web_exp_06.csprojResolveAssemblyReference.cache
+E:\6web\web_exp_06\web_exp_06\obj\Debug\web_exp_06.dll
+E:\6web\web_exp_06\web_exp_06\obj\Debug\web_exp_06.pdb

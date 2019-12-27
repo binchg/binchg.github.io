@@ -1,0 +1,185 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0037)http://202.202.1.41/XSCJ/f_cjdab.aspx -->
+<html data-livestyle-extension="available"><head><meta http-equiv="Content-Type" content="text/html; charset=GBK">
+		<title></title>
+		<meta name="GENERATOR" content="Microsoft Visual Studio .NET 7.1">
+		<meta name="CODE_LANGUAGE" content="C#">
+		<meta name="vs_defaultClientScript" content="JavaScript">
+		<meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5">
+		<link href="./f_cjdab.aspx_files/styles_Qry.css" type="text/css" rel="stylesheet">
+		<script language="JavaScript" src="./f_cjdab.aspx_files/ind_HTML_hr.js.下载"></script><style type="text/css">.hrBorder{height:1; border-top:medium none; border-left:medium none; border-right:medium none; border-bottom:medium none;}</style>
+		
+		<script language="javascript">			
+			function Print(){
+				if(ChkSel()){
+					form1.target="_blank";
+					form1.action="f_cjdab_print.aspx";
+					form1.submit();
+				}
+			}
+			
+			function ChkVal(){
+				if(ChkSel()){
+					form1.target="main";
+					form1.action="f_cjdab_rpt.aspx";
+					form1.submit();
+					return true;
+				}else{
+					return false;
+				}
+			}
+			
+			function ChkSel(){
+				var chk_xh;
+				var ipt_xh
+				var sel_bjdm;
+				chk_xh=document.getElementById("ChkXH");
+				ipt_xh=document.getElementById("txtXH").value;
+				sel_bjdm=document.getElementById("sel_bj").value;
+				if(chk_xh.checked){
+					ipt_xh=ipt_xh.replace(' ','');
+					if(ipt_xh.length>0){
+						return true;}
+					else{
+						alert('须输入学号！');
+						return false;
+					}
+				}else{
+					if((sel_bjdm=="")||(sel_bjdm=="Nothing"))
+					{
+						alert('需选定行政班级！');
+						return false;
+					}
+					else{
+						return true;
+					}
+				}
+			}
+		</script>
+	</head>
+	<body text="#000000" bgcolor="#ffffff" leftmargin="0" topmargin="0" marginheight="0" marginwidth="0">
+		<form name="form1" action="http://202.202.1.41/XSCJ/f_cjdab_rpt.aspx" method="post" target="main" onsubmit="return ChkVal()">
+			<table height="100%" cellspacing="0" cellpadding="0" width="100%" border="0">
+				<tbody><tr>
+					<td valign="top" align="center">
+						<table height="26" cellspacing="0" cellpadding="0" width="660" align="center" border="0">
+							<tbody><tr>
+								<td valign="bottom" align="center"><b>查看学生成绩档案表[有效]</b></td>
+							</tr>
+							<tr>
+								<td valign="bottom" align="center">
+									<script language="JavaScript">Draw_HR('99.5%')</script><table border="0" cellpadding="0" cellspacing="0" width="99.5%" height="3px"><tbody><tr><td class="hrBorder" style="height:1px;background-color:#9A9A9A;"></td></tr><tr><td class="hrBorder" style="height:1px;background-color:#D5D5D5;"></td></tr></tbody></table>
+								</td>
+							</tr>
+						</tbody></table>
+					</td>
+				</tr>
+				<tr>
+					<td valign="top" align="center" width="100%" height="5%">
+						<table height="26" width="660" cellspacing="0" cellpadding="0" align="center" border="0">
+							<tbody><tr>
+								<td colspan="2">
+									<table id="PageRpt" cellpadding="0" cellspacing="0" border="0" width="100%"><tbody><tr><td>
+	<iframe id="TmpframeCommJeason" name="TmpframeCommJeason" src="./f_cjdab.aspx_files/saved_resource.html" frameborder="0" style="display:none;width:0px;height:0px;"></iframe><table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" height="54">
+<tbody><tr align="left">
+<td width="34%" height="26">&nbsp;学年学期&nbsp;<select name="sel_xnxq" onchange="changeIndex(this)" style="width:165px"><option value="20181">2018-2019学年第二学期</option><option value="20180" selected="">2018-2019学年第一学期</option><option value="20171">2017-2018学年第二学期</option><option value="20170">2017-2018学年第一学期</option><option value="20161">2016-2017学年第二学期</option><option value="20160">2016-2017学年第一学期</option><option value="20151">2015-2016学年第二学期</option><option value="20150">2015-2016学年第一学期</option><option value="20141">2014-2015学年第二学期</option><option value="20140">2014-2015学年第一学期</option><option value="20131">2013-2014学年第二学期</option><option value="20130">2013-2014学年第一学期</option><option value="20121">2012-2013学年第二学期</option><option value="20120">2012-2013学年第一学期</option><option value="20111">2011-2012学年第二学期</option><option value="20110">2011-2012学年第一学期</option></select></td>
+<td width="32%" align="center">年&nbsp;&nbsp;&nbsp;&nbsp;级&nbsp;<span id="TheNJ"><select name="sel_nj" onchange="autoSelet()" style="width:135px;"><option value=""></option><option value="2018">2018</option><option value="2017">2017</option><option value="2016">2016</option><option value="2015">2015</option><option value="2014">2014</option><option value="2013">2013</option></select></span></td>
+<td width="34%">院(系)/部&nbsp;<select name="sel_yx" onchange="changeIndex(this)" style="width:165px"><option value="09">大数据与软件学院</option></select></td>
+</tr>
+<tr align="left">
+<td width="34%" height="26">&nbsp;专&nbsp;&nbsp;&nbsp;&nbsp;业&nbsp;<span id="TheZY"><select name="sel_zy" onchange="changeIndex(this)" style="width:165px"><option value=""></option><option value="0901">软件工程</option><option value="0902">软件工程（数字媒体技术方向）</option><option value="0903">计算机类(计算机与软件)</option></select></span></td>
+<td width="32%" align="center">行政班级&nbsp;<span id="TheBJ"><select name="sel_bj" style="width:135px"><option value=""></option><option value="2017090101">17软件工程01</option><option value="2017090102">17软件工程02</option><option value="2017090103">17软件工程03</option><option value="2017090104">17软件工程04</option><option value="2017090105">17软件工程05</option><option value="2017090106">17软件工程06</option></select></span></td>
+<td width="34%"><input type="checkbox" name="ChkXH" id="ChkXH" onclick="checkXH(this)" style="width:18px;"><label for="ChkXH">学&nbsp;&nbsp;号</label>&nbsp;<input type="text" name="txtXH" value="" disabled="" style="width:165px;background:#dfdfdf"></td>
+</tr>
+<tr>
+
+</tr>
+</tbody></table>
+<script language="javascript"><!--
+function checkXH(obj){
+try{
+if(obj.checked){
+	document.all.txtXH.disabled=false;
+	document.all.txtXH.style.backgroundColor="#ffffff";
+}else{
+	document.all.txtXH.value='';
+	document.all.txtXH.disabled=true;
+	document.all.txtXH.style.backgroundColor="#dfdfdf";
+}
+}catch(e){alert(e);}
+}
+function autoSelet()
+{
+	try{
+	 document.all.sel_yx.onchange();
+ document.all.sel_yx.focus();
+	 document.all.sel_zy.value='';
+	 document.all.sel_bj.value='';
+	}catch(e){alert(e);}}
+function changeIndex(obj){
+try{
+	 var _name=obj.name,_value=obj.value,url='';	 var nj=document.all.sel_nj.value;	if(_name=='sel_xnxq'){
+		document.all.sel_nj.value='';
+		url='ListCommSelNJ.aspx?xnxq='+_value;
+		document.all.sel_yx.onchange();
+		document.all.sel_zy.value='';
+		document.all.sel_bj.value='';
+	 }else if(_name=='sel_yx'){
+		document.all.sel_bj.value='';
+		url='ListCommSelZY.aspx?yx='+_value+'&nj='+nj;
+	 }else if(_name=='sel_zy'){
+		url='ListCommSelBJ.aspx?zy='+_value+'&nj='+nj;	 }
+ if(url!=''){
+		url='../admin/Private/'+url+'&type=uc'; window.TmpframeCommJeason.document.location.href=url;
+  }
+}catch(e){alert(e);}
+}
+
+//--></script>
+<script language="javascript">document.all.sel_xnxq.onchange();</script>
+
+</td></tr></tbody></table>
+								</td>
+							</tr>
+							<tr>
+								<td>
+								&nbsp;入学时间&nbsp;<select name="yrxsj"><option value=""></option><option value="2000">2000年</option><option value="2001">2001年</option><option value="2002">2002年</option><option value="2003">2003年</option><option value="2004">2004年</option><option value="2005">2005年</option><option value="2006">2006年</option><option value="2007">2007年</option><option value="2008">2008年</option><option value="2009">2009年</option><option value="2010">2010年</option><option value="2011">2011年</option><option value="2012">2012年</option><option value="2013">2013年</option><option value="2014">2014年</option><option value="2015">2015年</option><option value="2016">2016年</option><option value="2017">2017年</option><option value="2018">2018年</option><option value="2019">2019年</option></select><select name="mrxsj"><option value=""></option><option value="1">1月</option><option value="2">2月</option><option value="3">3月</option><option value="4">4月</option><option value="5">5月</option><option value="6">6月</option><option value="7">7月</option><option value="8">8月</option><option value="9">9月</option><option value="10">10月</option><option value="11">11月</option><option value="12">12月</option></select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;毕业时间&nbsp;<select name="ybysj"><option value=""></option><option value="2000">2000年</option><option value="2001">2001年</option><option value="2002">2002年</option><option value="2003">2003年</option><option value="2004">2004年</option><option value="2005">2005年</option><option value="2006">2006年</option><option value="2007">2007年</option><option value="2008">2008年</option><option value="2009">2009年</option><option value="2010">2010年</option><option value="2011">2011年</option><option value="2012">2012年</option><option value="2013">2013年</option><option value="2014">2014年</option><option value="2015">2015年</option><option value="2016">2016年</option><option value="2017">2017年</option><option value="2018">2018年</option><option value="2019">2019年</option></select><select name="mbysj"><option value=""></option><option value="1">1月</option><option value="2">2月</option><option value="3">3月</option><option value="4">4月</option><option value="5">5月</option><option value="6">6月</option><option value="7">7月</option><option value="8">8月</option><option value="9">9月</option><option value="10">10月</option><option value="11">11月</option><option value="12">12月</option></select>
+									<!--<table cellSpacing="0" cellPadding="0" border="0">
+										<tr>
+											<td><input type="radio" CHECKED value="0" name="radCx" onclick="if(this.checked){document.all.btn_print.style.display='';}">
+											<td>
+											<td>A4(纵向)</td>
+											<td>&nbsp;<input type="radio" value="3" name="radCx" onclick="if(this.checked){document.all.btn_print.style.display='none';}"></td>
+											<td>A4(横三)</td>
+											<td>&nbsp;<input type="radio" value="4" name="radCx" onclick="if(this.checked){document.all.btn_print.style.display='none';}"></td>
+											<td>A3(横四)</td>
+											<td>&nbsp;<input type="radio" value="5" name="radCx" onclick="if(this.checked){document.all.btn_print.style.display='none';}"></td>
+											<td>A3(横五)</td>
+										</tr>
+									</table>-->
+									<input type="hidden" name="radCx" value="0">									
+								</td>
+								<td align="right">
+									<input class="button" type="submit" value="检索" name="btn_search"> 
+									<input class="button" type="button" value="打印" name="btn_print" onclick="return Print()">
+								</td>
+							</tr>
+						</tbody></table>
+					</td>
+				</tr>
+				<tr>
+					<td valign="top" align="center" height="5%"><br>
+						<div id="theHead" style="DISPLAY: none; WIDTH: 99%"></div>
+					</td>
+				</tr>
+				<tr>
+					<td valign="top" align="center" width="100%" height="100%">
+						<iframe name="main" src="./f_cjdab.aspx_files/f_cjdab_rpt.html" width="99%" height="99%" frameborder="0">
+						</iframe>
+					</td>
+				</tr>
+			</tbody></table>
+		</form>
+	
+
+</body></html>

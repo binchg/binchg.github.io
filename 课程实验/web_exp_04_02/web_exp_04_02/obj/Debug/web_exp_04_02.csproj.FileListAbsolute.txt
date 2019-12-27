@@ -1,0 +1,6 @@
+E:\6web\web_exp_04_02\web_exp_04_02\bin\web_exp_04_02.dll.config
+E:\6web\web_exp_04_02\web_exp_04_02\bin\web_exp_04_02.dll
+E:\6web\web_exp_04_02\web_exp_04_02\bin\web_exp_04_02.pdb
+E:\6web\web_exp_04_02\web_exp_04_02\obj\Debug\web_exp_04_02.csprojResolveAssemblyReference.cache
+E:\6web\web_exp_04_02\web_exp_04_02\obj\Debug\web_exp_04_02.dll
+E:\6web\web_exp_04_02\web_exp_04_02\obj\Debug\web_exp_04_02.pdb

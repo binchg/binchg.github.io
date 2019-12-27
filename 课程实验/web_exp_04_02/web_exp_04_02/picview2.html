@@ -1,0 +1,381 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>无标题文档</title>
+    <style type="text/css">
+        * {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            border: 0;
+            background: #000;
+        }
+        .test {
+            color: #fff ;
+            font-size: 150%;
+        }
+        /*图片设置*/
+        .all {
+            width: 1280px;
+            height: 720px;
+            padding: 1px;
+            border: 1px solid #ccc;
+            margin:20px auto;
+            position: relative;
+        }
+        /*图片区*/
+        .screen {
+            width: 1280px;
+            height: 720px;
+            overflow: hidden;
+            position: relative;
+            /*left: 50%;
+            top: 50%;*/
+        }
+            /*容器*/
+            .screen ul {
+                position: absolute;
+                left: 0;
+                top: 0px;
+                width: 7680px;
+            }
+            /*单张图片*/
+            .screen li {
+                width: 1280px;
+                height: 720px;
+                overflow: hidden;
+                float: left;
+                text-align: center; /*水平居中*/
+                box-sizing: border-box;
+                background:#000;
+            }
+        b {
+            height: 100%;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        img {
+            vertical-align: middle;
+            width: auto;
+            max-width: 100%;
+            max-height: 100%;
+        }
+        /*数字*/
+        .all ol {
+            position: absolute;
+            left: 10px;
+            bottom: 10px;
+            line-height: 20px;
+            text-align: center;
+        }
+        .all ol li {
+                float: left;
+                width: 20px;
+                height: 20px;
+                background: rgba(255, 255, 255, 0.61);
+                margin-left: 2px;
+                cursor: pointer;
+            }
+         .all ol li.current {
+                    background: #fff;
+                }
+        #arr span {
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            top: 50%;
+            margin-top: -20px;
+            background: rgba(4, 4, 4, 0.56);
+            cursor: pointer;
+            line-height: 40px;
+            text-align: center;
+            font-weight: bold;
+            font-family: '黑体';
+            font-size: 30px;
+            color: #fff;
+            /*opacity: 0.3;*/
+            border: 0px solid #fff;
+        }
+
+        #arr #right {
+            right: 5px;
+            left: auto;
+        }
+        .button {
+            font-family: '微软雅黑';
+            position:inherit;
+            top:5px;
+            display: inline-block;
+            background: #10b28c;
+            border-radius: 4px;
+            padding: 4px 12px;
+            overflow: hidden;
+            color: #000;
+            text-decoration: none;
+            text-indent: 0;
+            line-height: 20px;
+        }
+
+            .button input {
+                position: absolute;
+                font-size: 100px;
+                right: 0px;
+                top: 0;
+                opacity: 0;
+            }
+
+            .button:hover {
+                background: rgba(16, 178, 140, 0.70);
+                border-color: #78C3F3;
+                color: #000;
+                text-decoration: none;
+            }
+        .all input {
+            background: rgba(4, 4, 4, 0.56);
+            font-size: 20px;
+            font-family: '微软雅黑';
+            color: #000;
+            right: 5px;
+            margin-top: 20px;
+            border: 1px solid rgba(0, 0, 0, 0.54);
+        }
+        #choose {
+            width: 80px;
+            font-size: 16px;
+            font-family: '微软雅黑';
+            color: #000;
+            right: 5px;
+            margin-top: 15px;
+            border: 1px solid rgba(0, 0, 0, 0);
+            filter: alpha(opacity=0);
+        }
+
+        .test {
+           
+        }
+    </style>
+</head>
+<body>
+    <div class="test" id='test'>test</div>
+    <div class="all" id='all'>
+        <div class="screen" id="screen">
+            <ul id="ul">
+                <li><b></b><img  src="images/01.jpg"/></li>
+                <li><b></b><img  src="images/02.jpg"/></li>
+                <li><b></b><img  src="images/03.jpg"/></li>
+                <li><b></b><img  src="images/04.jpg"/></li>
+                <li><b></b><img  src="images/05.jpg"/></li>
+            </ul>
+        </div>
+        <ol></ol>
+        <div id="arr">
+            <span id="left"><</span>
+            <span id="right">></span>
+        </div>
+        <input type="file" name="" id="file_open" multiple="multiple" accept="image" style="display:none" value="" />
+        <a class="button" id="choose" onclick="F_Open_dialog()">
+            选择图片
+        </a>
+        <a href="javascript:;" id="start" class="button" name="1">
+            幻灯片放映
+            <input type="button" value="" />
+        </a>
+        <a href="javascript:;" id="big" class="button" name="1" onclick="scale();">
+            放大
+            <input type="button" value="" />
+        </a>
+        <a href="javascript:;" id="small" class="button" name="1">
+            缩小
+            <input type="button" value="" />
+        </a>
+        <a href="javascript:;" id="org" class="button" name="1">
+            原图
+            <input type="button" value="" />
+        </a>
+    </div>
+</body>
+</html>
+<script>
+   
+    //需求：无缝轮播图
+    //步骤：
+    //1.老三步。获取相关元素。
+    //2.补齐相互盒子
+    //1.复制第一张图片所在的li，填入所在的ul中。
+    //2.生成相关的ol中的li。
+    //3.点亮第一个ol中的li。
+    //3.鼠标放到小方块儿上，轮播图片。
+    //4.添加定时器。
+    //5.左右切换的按钮。
+    //1.老三步。获取相关元素。
+    var box = document.getElementById("all");
+    var ul = box.children[0].children[0];
+    var ol = box.children[1];
+    var choose = document.getElementById("choose");
+    var start = document.getElementById("start");
+    var test = document.getElementById("test");
+    var ulLiArr = ul.children;
+    var file_open = document.getElementById("file_open");
+    var img = document.getElementsByTagName('img')
+
+    //2.补齐相互盒子
+    //1.复制第一张图片所在的li，填入所在的ul中。
+    var newLi = ulLiArr[0].cloneNode(true);
+    function print(str) {
+        test.innerText = test.innerText + "|" + str;
+    }
+    ul.appendChild(newLi);
+    //2.生成相关的ol中的li。
+    for (var i = 0; i < ulLiArr.length - 1; i++) {
+        var newOlLi = document.createElement("li");
+        newOlLi.innerHTML = i + 1;
+        ol.appendChild(newOlLi);
+    }
+    //3.点亮第一个ol中的li。
+    var olLiArr = ol.children;
+    ol.children[0].className = "current";
+    //3.鼠标放到小方块儿上，轮播图片。
+    for (var i = 0; i < olLiArr.length; i++) {
+        olLiArr[i].index = i;
+        olLiArr[i].onmouseover = function () {
+            for (var j = 0; j < olLiArr.length; j++) {
+                olLiArr[j].className = "";
+            }
+            olLiArr[this.index].className = "current";
+            print(this.index+1);
+            animate(ul, -this.index * ul.children[0].offsetWidth);
+            key = square = this.index;
+        }
+    }
+    //4.添加定时器。
+    var timer = null;
+    var key = 0;
+    var square = 0;
+    //timer = setInterval(autoPlay, 1000);
+    function autoPlay() {
+        key++;
+        square++;
+        if (key > olLiArr.length) {
+            key = 1;
+            ul.style.left = 0;
+        }
+        animate(ul, -key * ul.children[0].offsetWidth);
+        square = square > olLiArr.length - 1 ? 0 : square;
+        for (var j = 0; j < olLiArr.length; j++) {
+            olLiArr[j].className = "";
+        }
+        olLiArr[square].className = "current";
+    }
+    //5.鼠标移开开启定时器，鼠标放上去开启定时器。
+    start.onclick = function () {
+        var flat = start.name;
+        print(flat)
+        if (flat == "1") {
+            clearInterval(timer);
+            timer = setInterval(autoPlay, 2000);
+            start.name = 0;
+        }
+        else {
+            clearInterval(timer);
+            start.name = 1;
+        }
+    }
+    ol.onmouseover = function () {
+        //clearInterval(timer);
+    }
+    ol.onmouseout = function () {
+        var flat = start.name;
+        if (flat == "0") {
+            clearInterval(timer);
+            timer = setInterval(autoPlay, 1000);
+        }
+        else {
+            clearInterval(timer);
+        }
+    }
+    //6.左右切换的按钮。
+    var btnArr = box.children[2].children;
+    btnArr[0].onclick = function () {
+        key--;
+        square--;
+        if (key < 0) {
+            key = 4;
+            ul.style.left = -5 * ul.children[0].offsetWidth + "px";
+            print('0');
+        }
+        animate(ul, -key * ul.children[0].offsetWidth);
+        square = square < 0 ? olLiArr.length - 1 : square;
+        for (var j = 0; j < olLiArr.length; j++) {
+            olLiArr[j].className = "";
+        }
+        olLiArr[square].className = "current";
+
+    }
+    btnArr[1].onclick = function () {
+        autoPlay();
+    }
+    //  基本封装
+    function animate(obj, target) {
+        clearInterval(obj.timer);
+        var speed = obj.offsetLeft < target ? 100 : -100;
+        obj.timer = setInterval(function () {
+            var result = target - obj.offsetLeft;
+            obj.style.left = obj.offsetLeft + speed + "px";
+            if (Math.abs(result) <= 100) {
+                obj.style.left = target + "px";
+                clearInterval(obj.timer);
+            }
+        }, 5);
+    }
+    big.onclick=function() {
+        var i = document.getElementsByClassName("current")[0].innerHTML-1;
+        print('大'+i);
+        var img = document.getElementsByTagName('img')[i]
+        var width =  img.naturalWidth; // 690
+        var swidth = img.style.width;
+        if(swidth){
+            swidth =img.style.width.substr(0,swidth.length - 2)
+            img.style.width = swidth*1.2+'px';
+        }
+        else{
+            img.style.width = width*1.2+'px';
+        }
+        
+    }
+    small.onclick=function() {
+        var i = document.getElementsByClassName("current")[0].innerHTML - 1;
+        print('小' + i);
+        var img = document.getElementsByTagName('img')[i]
+        var width =  img.naturalWidth; // 690
+        var swidth = img.style.width;
+        if(swidth){
+            swidth =img.style.width.substr(0,swidth.length - 2)
+            img.style.width = swidth*0.9+'px';
+        }
+        else{
+            img.style.width = width*0.9+'px';
+        }
+        
+    }
+    org.onclick=function() {
+        var i = document.getElementsByClassName("current")[0].innerHTML - 1;
+        print('原' + i);
+        var img = document.getElementsByTagName('img')[i]
+        var width =  img.naturalWidth; // 690
+        img.style.width = width+'px'; 
+    }
+    
+   
+    function F_Open_dialog() 
+    { 
+        file_open.click();
+        var fn = file_open.value.split(",");
+        for (var i = 0; i < fn.length; i++) {
+            print(fn[i]);
+            img[i].src = fn[i];
+        }
+        img[5].src = fn[0];
+
+    } 
+</script>

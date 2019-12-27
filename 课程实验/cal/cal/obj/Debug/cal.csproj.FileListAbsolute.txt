@@ -1,0 +1,6 @@
+E:\6web\cal\cal\bin\cal.dll.config
+E:\6web\cal\cal\bin\cal.dll
+E:\6web\cal\cal\bin\cal.pdb
+E:\6web\cal\cal\obj\Debug\cal.dll
+E:\6web\cal\cal\obj\Debug\cal.pdb
+E:\6web\cal\cal\obj\Debug\cal.csprojResolveAssemblyReference.cache

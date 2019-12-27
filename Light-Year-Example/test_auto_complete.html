@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+<title>自动完成插件jquery.auto.complete - 光年(Light Year Admin)后台管理系统模板</title>
+<link rel="icon" href="favicon.ico" type="image/ico">
+<meta name="keywords" content="LightYear,光年,后台模板,后台管理系统,光年HTML模板">
+<meta name="description" content="LightYear是一个基于Bootstrap v3.3.7的后台管理系统的HTML模板。">
+<meta name="author" content="yinqi">
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/materialdesignicons.min.css" rel="stylesheet">
+<link href="js/jquery-auto-complete/jquery.auto-complete.min.css" rel="stylesheet">
+<link href="css/style.min.css" rel="stylesheet">
+<style>
+
+</style>
+</head>
+  
+<body>
+<div class="container-fluid">
+  
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header"><h4>自动完成插件 jquery.auto.complete</h4></div>
+        <div class="card-body">
+          <p>这里示例使用的版本是v1.0.7，演示中只返回同样的数据，请尝试输入"李"</p>
+          <form action="#!" method="post" id="example-from">
+            <div class="form-group">
+              <label for="author">作者</label>
+              <input type="text" class="form-control" placeholder="作者" name="example-author" id="author">
+              <input type="hidden" name="author_id" id="author_id">
+            </div>
+          </form>
+          
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  
+</div>
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery-auto-complete/jquery.auto-complete.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+    //调用方法以设置参数并绑定数据
+    $('#author').autoComplete({
+        minChars: 1,
+        source: function(term, suggest) {
+            term = term.toLowerCase();
+            
+			$.ajax({  
+				url : "author.php", // 演示用，后端返回数据跟搜索内容无关（或者搜素'李'）
+				type : "post",  
+				dataType : "json",
+				data : {"author" : term},  
+				
+				success: function( data ) {
+					suggest(data);
+				}  
+			});
+        },
+        renderItem: function (item, search) {
+            search = search.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
+            var re = new RegExp("(" + search.split(' ').join('|') + ")", "gi");
+            return '<div class="autocomplete-suggestion" data-id="'+item.id+'" data-val="'+search+'" data-result="'+item.name+'">'+item.name.replace(re, "<b>$1</b>")+'</div>';
+        },
+        onSelect: function(e, term, item){
+            $("#author").val(item.data('result'));
+            $("#author_id").val(item.data('id'));
+        }
+    });
+    // 删除内容时将author_id置为空
+    $("#author").on('change', function(){
+        if ($.trim($(this).val()).length == 0) {
+            $("#author_id").val('');
+        }
+    });
+});
+</script>
+</body>
+</html>

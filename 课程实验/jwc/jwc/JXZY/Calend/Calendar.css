@@ -1,0 +1,19 @@
+Body {border:0;
+font-size: 10px; font-family: "ËÎÌו"; background-color:#ffffff; COLOR: #163A54; 
+}
+
+Table.tblBody{
+border-left:2 #808080 #FFFFFF outset;border-top:2 #808080 #FFFFFF outset;
+border-right:1 #808080 #000000 outset;border-bottom:1 #808080 #000000 outset;
+}
+Table.tblWeek{cursor:default;
+border-left:1 #000000 solid;border-top:1 #000000 solid;
+border-right:2 #808080 #FFFFFF inset;border-bottom:2 #808080 #FFFFFF inset;
+}
+
+TR.trWeek {BACKGROUND-COLOR: #f4fef9}
+TR.trDay {BACKGROUND-COLOR: #FFFFFF}
+
+TD{font-family:"ËÎÌו"; font-size: 12px;}
+
+

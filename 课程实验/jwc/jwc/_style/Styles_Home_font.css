@@ -1,0 +1,42 @@
+body { 
+font-size: 12px; font-family: "宋体"; color:#31519C;
+	SCROLLBAR-FACE-COLOR: #F2F3FB; SCROLLBAR-HIGHLIGHT-COLOR: #F2F3FB;
+	SCROLLBAR-SHADOW-COLOR: #006699; SCROLLBAR-3DLIGHT-COLOR: #006699;
+	SCROLLBAR-ARROW-COLOR: #006699; SCROLLBAR-TRACK-COLOR: #F2F3FB;
+	SCROLLBAR-DARKSHADOW-COLOR: #F2F3FB;
+}
+
+td {
+	font-family: "宋体";
+	font-size: 12px;
+	text-decoration: none;
+	line-height: 20px;
+
+}
+A:link       {
+	COLOR:#31519C;
+	FONT-FAMILY:"宋体";
+	TEXT-DECORATION:none;
+	font-size: 12px;
+}
+A:visited    {COLOR:#2A7CB1;FONT-FAMILY:宋体;TEXT-DECORATION:none; }
+A:active     {FONT-FAMILY:宋体;TEXT-DECORATION:none; }
+A:hover      {COLOR:#DE9B45;TEXT-DECORATION:none; border-left-width:1; border-right-width:1; border-top-width:1}
+
+TABLE      {FONT-FAMILY:"宋体";FONT-SIZE:12px;COLOR:#000000}
+pre        {FONT-FAMILY:"宋体";FONT-SIZE:12px;COLOR:#000000}
+td         {
+	font-family: "宋体";
+	font-size: 9pt;
+	table-layout:fixed;
+	word-break :break-all;
+	color: #31519C;
+}
+SELECT	   {BORDER-RIGHT: #000000 1px solid; BORDER-TOP: #000000 1px solid; FONT-SIZE: 12px; BORDER-LEFT: #000000 1px solid; COLOR: #000000; BORDER-BOTTOM: #000000 1px solid; BACKGROUND-COLOR: #f4f4f4
+           }
+TEXTAREA   {scrollbar-face-color: #cccccc; scrollbar-highlight-color: #f5f9ff; 
+               scrollbar-shadow-color: #828282; scrollbar-3dlight-color: 
+               #000000; scrollbar-arrow-color: #797979; 
+               scrollbar-track-color: #cccccc; scrollbar-darkshadow-color: 
+               #000000; BORDER-TOP-WIDTH: 1px; BORDER-LEFT-WIDTH: 1px; FONT-SIZE: 12px; BORDER-BOTTOM-WIDTH: 1px; BACKGROUND-COLOR: #f4f4f4; BORDER-RIGHT-WIDTH: 1px}
+input		{font-size: 12px; background-color: #E8E8E8;border-top-width:1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; font-family:宋体;color:#000000; }

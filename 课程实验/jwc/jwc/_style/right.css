@@ -1,0 +1,34 @@
+body {  font-size: 12px; font-family: "宋体"; background-color: #F1F7FD;
+	SCROLLBAR-FACE-COLOR: #F2F3FB; SCROLLBAR-HIGHLIGHT-COLOR: #F2F3FB;
+	SCROLLBAR-SHADOW-COLOR: #006699; SCROLLBAR-3DLIGHT-COLOR: #006699;
+	SCROLLBAR-ARROW-COLOR: #006699; SCROLLBAR-TRACK-COLOR: #F2F3FB;
+	SCROLLBAR-DARKSHADOW-COLOR: #F2F3FB;
+}
+td {
+	font-family: "宋体";
+	font-size: 12px;
+	text-decoration: none;
+	line-height: 20px;
+
+}
+A:link       {COLOR:#003399;FONT-FAMILY:tahoma;TEXT-DECORATION:none; }
+A:visited    {COLOR:#003399;FONT-FAMILY:tahoma;TEXT-DECORATION:none; }
+A:active     {FONT-FAMILY:tahoma;TEXT-DECORATION:none; }
+A:hover      {COLOR:#5082E6;TEXT-DECORATION:none; border-left-width:1; border-right-width:1; border-top-width:1}
+
+TABLE      {
+	FONT-FAMILY:"宋体";
+	FONT-SIZE:12px;
+	COLOR:#035277;
+	line-height: 25px;
+}
+pre        {FONT-FAMILY:Tahoma;FONT-SIZE:9pt;COLOR:#1e428d;}
+td         { font-family: "宋体"; font-size: 12px;table-layout:fixed;word-break :break-all}
+SELECT	   {BORDER-RIGHT: #000000 1px solid; BORDER-TOP: #000000 1px solid; FONT-SIZE: 12px; BORDER-LEFT: #000000 1px solid; COLOR: #000000; BORDER-BOTTOM: #000000 1px solid; BACKGROUND-COLOR: #f4f4f4
+           }
+TEXTAREA   {scrollbar-face-color: #cccccc; scrollbar-highlight-color: #f5f9ff; 
+               scrollbar-shadow-color: #828282; scrollbar-3dlight-color: 
+               #000000; scrollbar-arrow-color: #797979; 
+               scrollbar-track-color: #cccccc; scrollbar-darkshadow-color: 
+               #000000; BORDER-TOP-WIDTH: 1px; BORDER-LEFT-WIDTH: 1px; FONT-SIZE: 12px; BORDER-BOTTOM-WIDTH: 1px; BACKGROUND-COLOR: #f4f4f4; BORDER-RIGHT-WIDTH: 1px}
+input		{BACKGROUND-IMAGE:  url(images/inputbg.gif);   font-size: 12px; background-color: #E8E8E8;border-top-width:1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; font-family:tahoma;color:#000000}

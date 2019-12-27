@@ -1,0 +1,89 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Web.Script.Serialization;
+using MySql.Data.MySqlClient;
+
+namespace web_exp_07
+{
+    public partial class WebForm1 : System.Web.UI.Page
+    {
+        public static MySqlConnection CreateConn()
+        {
+            string _conn = WebConfigurationManager.ConnectionStrings["DBConnection"].ConnectionString;
+            MySqlConnection conn = new MySqlConnection(_conn);
+            return conn;
+        }
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            Response.Clear();
+            //connect to the database server
+            SqlConnection con = new SqlConnection("Server=localhost; Initial Catalog=Web_Lab6; Trusted_Connection=yes");
+            con.Open();
+            //set query string
+            string id = Request.QueryString["id"];
+            if (id == null)
+            {
+                con.Close();
+                return;
+            }
+            else if (id == "1")
+            {
+                string sql = "SELECT DISTINCT province, provinceid FROM Countydata ORDER BY provinceid";
+                //handle dataset
+                SqlDataAdapter adapter = new SqlDataAdapter(sql, con);
+                DataTable dt = new DataTable();
+                adapter.Fill(dt);
+                //generate html stream
+                foreach (DataRow dataRow in dt.Rows)
+                {
+                    Response.Write("<option value=\"" + dataRow["provinceid"] + "\">"
+                        + dataRow["province"] + "</option>");
+                }
+            }
+            else if (id.Length == 2)
+            {
+                if (id == "00")
+                {
+                    Response.Write("");
+                    return;
+                }
+                string sql = "SELECT DISTINCT city, cityid FROM Countydata WHERE provinceid = '" + id + "' ORDER BY cityid";
+                //handle dataset
+                SqlDataAdapter adapter = new SqlDataAdapter(sql, con);
+                DataTable dt = new DataTable();
+                adapter.Fill(dt);
+                //generate html stream
+                foreach (DataRow dataRow in dt.Rows)
+                {
+                    Response.Write("<option value=\"" + dataRow["cityid"] + "\">"
+                        + dataRow["city"] + "</option>");
+                }
+            }
+            else if (id.Length == 4)
+            {
+                if (id == "0000")
+                {
+                    Response.Write("");
+                    return;
+                }
+                string sql = "SELECT DISTINCT county, countyid FROM Countydata WHERE cityid = '" + id + "' ORDER BY countyid";
+                //handle dataset
+                SqlDataAdapter adapter = new SqlDataAdapter(sql, con);
+                DataTable dt = new DataTable();
+                adapter.Fill(dt);
+                //generate html stream
+                foreach (DataRow dataRow in dt.Rows)
+                {
+                    Response.Write("<option value=\"" + dataRow["countyid"] + "\">"
+                        + dataRow["county"] + "</option>");
+                }
+            }
+            //write into response html
+            con.Close();
+        }
+    }
+}

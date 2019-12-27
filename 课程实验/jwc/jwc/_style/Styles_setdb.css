@@ -1,0 +1,169 @@
+body 
+{  
+	font-size: 12px; 
+	font-family: "ËÎÌו"; 
+	background-color:#bfe5d5;
+	COLOR:#163A54;
+	SCROLLBAR-FACE-COLOR: #F2F3FB; 
+	SCROLLBAR-HIGHLIGHT-COLOR: #F2F3FB;
+	SCROLLBAR-SHADOW-COLOR: #006699; 
+	SCROLLBAR-3DLIGHT-COLOR: #006699;
+	SCROLLBAR-ARROW-COLOR: #006699; 
+	SCROLLBAR-TRACK-COLOR: #F2F3FB;
+	SCROLLBAR-DARKSHADOW-COLOR: #F2F3FB
+}
+
+input.but20 
+{
+	font-family: "ËÎÌו";
+	font-size: 12px;
+	border: none;
+	cursor: hand;	
+	background-image: url(../images/button/bgbtn2_0.gif);
+	height: 20px;
+	width: 40px
+}
+
+Span 
+{
+	COLOR: red; 
+	FONT-SIZE: 12px; 
+	TEXT-DECORATION: none;
+	cursor_: hand
+}
+
+a 
+{  
+	font-size: 9pt; 
+	color: #000000; 
+	text-decoration: none
+}
+
+a:hover 
+{  
+	color: #0000FF; 
+	text-decoration: underline; 
+	font-size: 9pt
+}
+
+td 
+{  
+	font-size: 9pt
+}
+
+.bt 
+{  
+	font-size: 9pt; 
+	border-top-width: 1px; 
+	border-right-width: 1px; 
+	border-bottom-width: 1px; 
+	border-left-width: 1px; 
+	height: 18px;
+	width: 80px; 
+	background-color: #eeeeee; 
+	cursor: hand
+}
+
+.bt1 
+{  
+	font-size: 9pt; 
+	border-style: ridge; 
+	border-top-width: 1px; 
+	border-right-width: 1px; 
+	border-bottom-width: 1px; 
+	border-left-width: 1px; 
+	height: 20px; 
+	width: 60px; 
+	cursor: hand
+}
+
+.bt2 
+{ 
+	border-color: #FFFFFF #999999 #999999 #FFFFFF; 
+	cursor: hand; 
+	border-style: ridge; 
+	border-top-width: 1px; 
+	border-right-width: 1px; 
+	border-bottom-width: 1px; 
+	border-left-width: 1px 
+}
+
+.bt3 
+{  
+	border: #CCCCCC; 
+	border-style: solid; 
+	border-top-width: 1px; 
+	border-right-width: 1px; 
+	border-bottom-width: 1px; 
+	border-left-width: 1px
+}
+
+.bt4 
+{  
+	border-color: #FFFFFF #666666 #666666 #FFFFFF; 
+	cursor: hand; 
+	border-style: solid; 
+	border-top-width: 1px; 
+	border-right-width: 1px; 
+	border-bottom-width: 1px; 
+	border-left-width: 1px
+}
+
+.tx 
+{  
+	height: 16px; 
+	width: 30px; 
+	border-color: black black #000000; 
+	border-top-width: 0px; 
+	border-right-width: 0px; 
+	border-bottom-width: 1px; 
+	border-left-width: 0px; 
+	font-size: 9pt; 
+	background-color: #eeeeee; 
+	color: #0000FF
+}
+
+.tx1 
+{ 
+	height: 20px; 
+	width: 143px; 
+	font-size: 9pt; 
+	border: 1px solid; 
+	border-color: #000000; 
+	color: #0000FF
+}
+
+.tx2 
+{ 
+	height: 20px; 
+	width: 265px; 
+	font-size: 9pt; 
+	border: 1px solid; 
+	border-color: #000000; 
+	color: #0000FF;
+	background-color: #cccccc
+}
+
+.tx3 
+{  
+	font-size: 9pt; 
+	border-style: groove; 
+	border-top-width: 1px; 
+	border-right-width: 1px; 
+	border-bottom-width: 1px; 
+	border-left-width: 1px
+}
+
+.txtNO 
+{  
+	height: 16px; 
+	width: 100px; 
+	border-color: #000000; 
+	border-top-width: 0px; 
+	border-right-width: 0px; 
+	border-bottom-width: 0px; 
+	border-left-width: 0px; 
+	font-size: 9pt; 
+	background-color: #89bfa7; 
+	color:red
+}

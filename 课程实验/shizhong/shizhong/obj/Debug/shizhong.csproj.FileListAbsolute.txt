@@ -1,0 +1,6 @@
+E:\6web\shizhong\shizhong\bin\shizhong.dll.config
+E:\6web\shizhong\shizhong\bin\shizhong.dll
+E:\6web\shizhong\shizhong\bin\shizhong.pdb
+E:\6web\shizhong\shizhong\obj\Debug\shizhong.csprojResolveAssemblyReference.cache
+E:\6web\shizhong\shizhong\obj\Debug\shizhong.dll
+E:\6web\shizhong\shizhong\obj\Debug\shizhong.pdb

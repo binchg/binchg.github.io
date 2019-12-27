@@ -1,0 +1,17 @@
+<?xml version ='1.0' encoding='GB2312' ?>
+<root>
+<param>
+<jc>10</jc>
+<xnxq>20041</xnxq>
+<time id='01' hour="50分钟">08:00-08:50</time>
+<time id='02' hour="50分钟">09:00-09:50</time>
+<time id='03' hour="50分钟">10:00-10:50</time>
+<time id='04' hour="50分钟">11:00-11:50</time>
+<time id='05' hour="50分钟">14:00-14:50</time>
+<time id='06' hour="50分钟">15:00-15:50</time>
+<time id='07' hour="50分钟">16:00-16:50</time>
+<time id='08' hour="50分钟">17:00-17:50</time>
+<time id='09' hour="50分钟">19:00-19:50</time>
+<time id='10' hour="50分钟">20:00-20:50</time>
+</param>
+</root>

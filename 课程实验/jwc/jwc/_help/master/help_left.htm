@@ -1,0 +1,214 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>目录树</title>
+<link href="../_style/default/styles_help.css" rel="stylesheet" type="text/css">
+<script language="JavaScript">
+<!--
+function showLay(divId){
+	var objDiv = eval(divId);
+	if (objDiv.style.display=="none"){
+		eval("img"+divId+".src='image/-1.gif'");
+		objDiv.style.display="";
+	}else{
+		eval("img"+divId+".src='image/+1.gif'");
+		objDiv.style.display="none";
+	}
+}
+
+function ToLink(Tcase)
+{		
+	var whichEl;
+			
+	if(Tcase==0){
+        parent.left.document.location.href='tree_left.htm';
+	}else{
+	parent.right.document.location.href=Tcase.value;
+	}
+}
+// -->
+</script>
+<style type="text/css">
+<!--
+.style1 {font-size: 12px}
+-->
+</style>
+</head>
+
+<body leftmargin="6" topmargin="16" marginwidth="0" marginheight="0" bgcolor="#E8E8E8" onselectstart=window.event.returnValue=false 
+oncontextmenu=window.event.returnValue=false 
+ondragstart=window.event.returnValue=false 
+onsource=window.event.returnValue=false>
+  <span class="style1" onclick=showLay('Layer1')> 
+  <img src="image/-1.gif" width="31" id=imgLayer1><span id=a value=MHWH/master.htm title='' onclick=ToLink(this)> <a href="#" class=tree>门户维护</a></span><br>
+  </span> 
+	   
+  <div id="Layer1" style="display:none_; font-size: 12px;">	
+	 <span onclick=showLay('Layer2')> 
+		&nbsp;<img src="image/+1.gif" width="31" id=imgLayer2>&nbsp;<span id=a value=MHWH/1201.htm title='' onclick=ToLink(this)><a href="#" class=tree>权限管理</a></span><br>
+	 </span> 		
+	<div id="Layer2" style="display:none;"> 
+  	  <img src="image/tree.gif" width="55" height="18"> 
+      <span id=a value=MHWH/120101.htm title='' onclick=ToLink(this)>
+      <a href="#" class=tree> 角色定义</a></span><br>
+    	<img src="image/tree.gif" width="55" height="18">
+      <span id=a value=MHWH/120102.htm title='' onclick=ToLink(this)>
+      <a href="#" class=tree>菜单项→角色</a></span><br>
+	  <img src="image/tree.gif" width="55" height="18"> 
+      <span id=a value=MHWH/120103.htm title='' onclick=ToLink(this)>
+      <a href="#" class=tree> 管理人员定义</a></span><br>
+	  <img src="image/tree.gif" width="55" height="18"> 
+	  <span id=a value=MHWH/120104.htm title='' onclick=ToLink(this)>
+      <a href="#" class=tree> 角色→管理人员</a></span><br>
+	  <img src="image/tree.gif" width="55" height="18"> 
+	  <span id=a value=MHWH/120105.htm title='' onclick=ToLink(this)>
+      <a href="#" class=tree> 校区→管理人员/角色</a></span><br>
+	  <img src="image/tree.gif" width="55" height="18"> 
+	  <span id=a value=MHWH/120106.htm title='' onclick=ToLink(this)>
+      <a href="#" class=tree> 院(系)/部→管理人员/角色</a></span><br>
+	  <img src="image/tree.gif" width="55" height="18"> 
+	   <span id=a value=MHWH/120107.htm title='' onclick=ToLink(this)>
+      <a href="#" class=tree> 承担单位→管理人员/角色</a></span><br>
+	  <span onclick=showLay('Layer3')> 
+		&nbsp;&nbsp;&nbsp;
+		 <span id=a value=MHWH/120108.htm title='' onclick=ToLink(this)>
+      <img src="image/+1.gif" width="31" id=imgLayer3><a href="#" class=tree>&nbsp;限制登录 </a></span><br>
+	  </span> 
+	  <div id="Layer3" style="display:none;"> 
+  	    &nbsp;&nbsp;&nbsp;<img src="image/tree.gif" width="55" height="18"> 
+        <span id=a value=MHWH/12010801.htm title='' onclick=ToLink(this)>
+        <a href="#" class=tree> 拒绝IP</a></span><br>
+		 &nbsp;&nbsp;&nbsp;<img src="image/tree.gif" width="55" height="18"> 
+        <span id=a value=MHWH/12010802.htm title='' onclick=ToLink(this)>
+        <a href="#" class=tree> 绑定IP</a></span><br>
+		 &nbsp;&nbsp;&nbsp;<img src="image/tree.gif" width="55" height="18"> 
+        <span id=a value=MHWH/12010803.htm title='' onclick=ToLink(this)>
+        <a href="#" class=tree> 限制时间</a></span><br>
+	    &nbsp;&nbsp;&nbsp;<img src="image/tree.gif" width="55" height="18"> 
+        <span id=a value=MHWH/12010804.htm title='' onclick=ToLink(this)>
+        <a href="#" class=tree> 限制用户</a></span></div>
+		<img src="image/tree.gif" width="55" height="18"> 
+	  <span id=a value=MHWH/120109.htm title='' onclick=ToLink(this)>
+      <a href="#" class=tree> 浏览用户权限</a></span><br>
+	  <span onclick=showLay('Layer4')> 
+		&nbsp;&nbsp;&nbsp;<img src="image/+1.gif" width="31" id=imgLayer4>&nbsp;<span id=a value=MHWH/120110.htm title='' onclick=ToLink(this)>
+      <a href="#" class=tree>密码初始化</a></span><br>
+	  </span> 
+		<div id="Layer4" style="display:none;"> 
+		&nbsp;&nbsp;&nbsp;<img src="image/tree.gif" width="55" height="18"> 
+        <span id=a value=MHWH/12011001.htm title='' onclick=ToLink(this)>
+        <a href="#" class=tree> 学生</a></span><br>
+		&nbsp;&nbsp;&nbsp;<img src="image/tree.gif" width="55" height="18"> 
+        <span id=a value=MHWH/12011002.htm title='' onclick=ToLink(this)>
+        <a href="#" class=tree> 教师教辅人员</a></span>
+	 	</div>
+	</div>
+
+<!--第2层-->
+<span onclick=showLay('Layer5')> 
+&nbsp;<img src="image/+1.gif" width="31" id=imgLayer5>&nbsp;<span id=a value=MHWH/1202.htm title='' onclick=ToLink(this)><a href="#" class=tree>控制开关</a></span><br>
+</span> 
+<div id="Layer5" style="display:none;">
+  <img src="image/tree.gif" width="55" height="18"> 
+  <span id=a value=MHWH/120201.htm title='' onclick=ToLink(this)>
+  <a href="#" class=tree> 教学计划</a></span><br>
+  <img src="image/tree.gif" width="55" height="18"> 
+  <span id=a value=MHWH/120202.htm title='' onclick=ToLink(this)>
+  <a href="#" class=tree> 教学资源</a></span><br>
+  <img src="image/tree.gif" width="55" height="18">
+  <span id=a value=MHWH/120203.htm title='' onclick=ToLink(this)>
+  <a href="#" class=tree> 网上选课</a></span><br>
+  <img src="image/tree.gif" width="55" height="18">
+  <span id=a value=MHWH/120204.htm title='' onclick=ToLink(this)>
+  <a href="#" class=tree> 课表编排</a></span><br>
+  <img src="image/tree.gif" width="55" height="18"> 
+  <span id=a value=MHWH/120205.htm title='' onclick=ToLink(this)>
+  <a href="#" class=tree> 学生学籍</a></span><br>
+  <img src="image/tree.gif" width="55" height="18"> 
+  <span id=a value=MHWH/120206.htm title='' onclick=ToLink(this)>
+  <a href="#" class=tree> 学生成绩</a></span><br>
+  <img src="image/tree.gif" width="55" height="18">
+  <span id=a value=MHWH/120207.htm title='' onclick=ToLink(this)>
+  <a href="#" class=tree> 考试事务</a></span><br>
+  <img src="image/tree.gif" width="55" height="18">
+  <span id=a value=MHWH/120208.htm title='' onclick=ToLink(this)>
+  <a href="#" class=tree> 实践教学</a></span><br>
+  <img src="image/tree.gif" width="55" height="18">
+  <span id=a value=MHWH/120209.htm title='' onclick=ToLink(this)>
+  <a href="#" class=tree> 教学考评</a></span><br>
+  <img src="image/tree.gif" width="55" height="18">
+  <span id=a value=MHWH/120210.htm title='' onclick=ToLink(this)>
+  <a href="#" class=tree> 教材管理</a></span><br>
+  <img src="image/tree.gif" width="55" height="18">
+  <span id=a value=MHWH/120211.htm title='' onclick=ToLink(this)>
+  <a href="#" class=tree> 论坛控制</a></span><br>
+</div>
+
+<!--第3层-->
+<span onclick=showLay('Layer6')> 
+&nbsp;<img src="image/+1.gif" width="31" id=imgLayer6><span id=a value=MHWH/1203.htm title='' onclick=ToLink(this)> <a href="#" class=tree>首页管理</a></span><br>
+</span> 
+<div id="Layer6" style="display:none;">
+  <img src="image/tree.gif" width="55" height="18"> 
+  <span id=a value=MHWH/120301.htm title='' onclick=ToLink(this)>
+  <a href="#" class=tree> 教务动态</a></span><br>
+  <img src="image/tree.gif" width="55" height="18"> 
+  <span id=a value=MHWH/120302.htm title='' onclick=ToLink(this)>
+  <a href="#" class=tree> 管理规定</a></span><br>
+  <img src="image/tree.gif" width="55" height="18">
+  <span id=a value=MHWH/120303.htm title='' onclick=ToLink(this)>
+  <a href="#" class=tree> 文件上传</a></span><br>
+  <img src="image/tree.gif" width="55" height="18">
+  <span id=a value=MHWH/120304.htm title='' onclick=ToLink(this)>
+  <a href="#" class=tree> 校历</a></span><br>
+  <img src="image/tree.gif" width="55" height="18"> 
+  <span id=a value=MHWH/120305.htm title='' onclick=ToLink(this)>
+  <a href="#" class=tree> 作息时间</a></span><br>
+  <img src="image/tree.gif" width="55" height="18"> 
+  <span id=a value=MHWH/120306.htm title='' onclick=ToLink(this)>
+  <a href="#" class=tree> 管理人员</a></span><br>
+  <img src="image/tree.gif" width="55" height="18">
+  <span id=a value=MHWH/120307.htm title='' onclick=ToLink(this)>
+  <a href="#" class=tree> 学科建设</a></span><br>
+  <img src="image/tree.gif" width="55" height="18">
+  <span id=a value=MHWH/120308.htm title='' onclick=ToLink(this)>
+  <a href="#" class=tree> 问卷调查</a></span><br>
+  <img src="image/tree.gif" width="55" height="18">
+  <span id=a value=MHWH/120309.htm title='' onclick=ToLink(this)>
+  <a href="#" class=tree> 友情链接</a></span><br>
+  <img src="image/tree.gif" width="55" height="18">
+  <span id=a value=MHWH/120310.htm title='' onclick=ToLink(this)>
+  <a href="#" class=tree> 滚动字幕</a></span><br>  
+</div>
+
+<!--第4层-->
+<span onclick=showLay('Layer7')> 
+&nbsp;<img src="image/+1.gif" width="31" id=imgLayer7><span id=a value=MHWH/1204.htm title='' onclick=ToLink(this)>
+  <a href="#" class=tree>论坛</a></span><br>
+</span> 
+<div id="Layer7" style="display:none;">
+  <img src="image/tree.gif" width="55" height="18"> 
+  <span id=a value=MHWH/120401.htm title='' onclick=ToLink(this)>
+  <a href="#" class=tree> 设置显示用户信息</a></span><br>
+  <img src="image/tree.gif" width="55" height="18"> 
+  <span id=a value=MHWH/120402.htm title='' onclick=ToLink(this)>
+  <a href="#" class=tree> 论坛首页</a></span><br>
+  <img src="image/tree.gif" width="55" height="18">
+  <span id=a value=MHWH/120403.htm title='' onclick=ToLink(this)>
+  <a href="#" class=tree> 设置讨论区</a></span><br>
+  <img src="image/tree.gif" width="55" height="18">
+  <span id=a value=MHWH/120404.htm title='' onclick=ToLink(this)>
+  <a href="#" class=tree> 限制讨论</a></span><br>  
+</div>
+<!--第5层-->
+&nbsp;<img src="image/1.gif" width="30">
+<span id=a value=MHWH/1205.htm title='' onclick=ToLink(this)>
+<a href="#" class=tree> 用户日志</a></span><br>
+<!--第6层-->
+&nbsp;<img src="image/1.gif" width="30">
+<span id=a value=MHWH/1206.htm title='' onclick=ToLink(this)>
+<a href="#" class=tree> 其它</a></span>
+</div>
+</body>
+</html>

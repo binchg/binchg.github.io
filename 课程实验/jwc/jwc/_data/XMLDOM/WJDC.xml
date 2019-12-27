@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="gb2312"?>
+<root>
+  <WJDC id="632709293255452624">
+    <IsView>1</IsView>
+    <QuestionStr>你对学校的管理水平评价如何?</QuestionStr>
+    <AnswerStr key="1">
+      <NameStr>非常满意</NameStr>
+      <Count>0</Count>
+    </AnswerStr>
+    <AnswerStr key="2">
+      <NameStr>满意</NameStr>
+      <Count>0</Count>
+    </AnswerStr>
+    <AnswerStr key="3">
+      <NameStr>一般</NameStr>
+      <Count>0</Count>
+    </AnswerStr>
+    <AnswerStr key="4">
+      <NameStr>有待改进</NameStr>
+      <Count>0</Count>
+    </AnswerStr>
+    <AnswerStr key="5">
+      <NameStr>很差</NameStr>
+      <Count>0</Count>
+    </AnswerStr>
+  </WJDC>
+</root>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+<title>弹出式工具栏 - 光年(Light Year Admin)后台管理系统模板</title>
+<link rel="icon" href="favicon.ico" type="image/ico">
+<meta name="keywords" content="LightYear,光年,后台模板,后台管理系统,光年HTML模板">
+<meta name="description" content="LightYear是一个基于Bootstrap v3.3.7的后台管理系统的HTML模板。">
+<meta name="author" content="yinqi">
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/materialdesignicons.min.css" rel="stylesheet">
+<link href="js/jquery-toolbar/jquery-toolbar.min.css" rel="stylesheet">
+<link href="css/style.min.css" rel="stylesheet">
+<style>
+</style>
+</head>
+  
+<body>
+<div class="container-fluid">
+  
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header"><h4>弹出式工具栏 jquery.toolbar</h4></div>
+        <div class="card-body">
+          
+          <div class="row">
+            <div class="col-md-4 col-sm-6 mb-4">
+              <p>顶部工具栏</p>
+              <div class="btn-jq-toolbar" id="top-toolbar"><i class="mdi mdi-settings"></i></div>
+              <hr/>
+            </div>
+            <div class="col-md-4 col-sm-6 mb-4">
+              <p>左侧工具栏</p>
+              <div class="btn-jq-toolbar btn-primary" id="left-toolbar"><i class="mdi mdi-settings"></i></div>
+              <hr/>
+            </div>
+            <div class="col-md-4 col-sm-6 mb-4">
+              <p>顶部工具栏</p>
+              <div class="btn-jq-toolbar btn-danger" id="bottom-toolbar"><i class="mdi mdi-settings"></i></div>
+              <hr/>
+            </div>
+            <div class="col-md-4 col-sm-6 mb-4">
+              <p>右侧工具栏</p>
+              <div class="btn-jq-toolbar btn-warning" id="right-toolbar"><i class="mdi mdi-settings"></i></div>
+              <hr/>
+            </div>
+            <div class="col-md-4 col-sm-6 mb-4">
+              <p>点击显示</p>
+              <div class="btn-jq-toolbar btn-info" id="click-toolbar"><i class="mdi mdi-settings"></i></div>
+              <hr/>
+            </div>
+            <div class="col-md-4 col-sm-6 mb-4">
+              <p>翻转效果</p>
+              <div class="btn-jq-toolbar btn-success" id="flip-toolbar"><i class="mdi mdi-settings"></i></div>
+              <hr/>
+            </div>
+            <div class="col-md-4 col-sm-6 mb-4">
+              <p>放大效果</p>
+              <div class="btn-jq-toolbar btn-purple" id="grow-toolbar"><i class="mdi mdi-settings"></i></div>
+            </div>
+            <div class="col-md-4 col-sm-6 mb-4">
+              <p>飞入效果</p>
+              <div class="btn-jq-toolbar btn-secondary" id="flyin-toolbar"><i class="mdi mdi-settings"></i></div>
+            </div>
+            <div class="col-md-4 col-sm-6 mb-4">
+              <p>弹跳效果</p>
+              <div class="btn-jq-toolbar btn-dark" id="bounce-toolbar"><i class="mdi mdi-settings"></i></div>
+            </div>
+          </div>
+
+          <!--按钮组自己定义，这里使用固定的一个-->
+          <div id="toolbar-options" class="hide">
+            <a href="#!"><i class="mdi mdi-pause"></i></a>
+            <a href="#!"><i class="mdi mdi-content-cut"></i></a>
+            <a href="#!"><i class="mdi mdi-microphone"></i></a>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  
+</div>
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js//jquery-toolbar/jquery.toolbar.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+    $('#top-toolbar').toolbar({
+        content: '#toolbar-options',
+        position: 'top',
+        style: 'default'
+    });
+    $('#left-toolbar').toolbar({
+        content: '#toolbar-options',
+        position: 'left',
+        style: 'primary'
+    });
+    $('#bottom-toolbar').toolbar({
+        content: '#toolbar-options',
+        position: 'bottom',
+        style: 'danger'
+    });
+    $('#right-toolbar').toolbar({
+        content: '#toolbar-options',
+        position: 'right',
+        style: 'warning'
+    });
+    $('#click-toolbar').toolbar({
+        content: '#toolbar-options',
+        style: 'info',
+        event: 'click'
+    });
+    $('#flip-toolbar').toolbar({
+        content: '#toolbar-options',
+        style: 'success',
+        animation: 'flip',
+    });
+    $('#grow-toolbar').toolbar({
+        content: '#toolbar-options',
+        style: 'purple',
+        animation: 'grow',
+    });
+    $('#flyin-toolbar').toolbar({
+        content: '#toolbar-options',
+        style: 'secondary',
+        animation: 'flyin',
+    });
+    $('#bounce-toolbar').toolbar({
+        content: '#toolbar-options',
+        style: 'dark',
+        animation: 'bounce',
+    });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,2 @@
+<%@ Page language="c#" Codebehind="Tea_HJCJLR_rpt.aspx.cs" AutoEventWireup="false" Inherits="KingosoftFrame.XSCJ.Tea_HJCJLR_rpt" %>
+<script language=javascript src=../include/Scr/ind_subPublic.js></script>

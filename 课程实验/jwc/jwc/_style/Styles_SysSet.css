@@ -1,0 +1,62 @@
+body {  font-size: 12px; font-family: "宋体"; background-color:#F1F7FD;COLOR:#163A54;
+	SCROLLBAR-FACE-COLOR: #F2F3FB; SCROLLBAR-HIGHLIGHT-COLOR: #F2F3FB;
+	SCROLLBAR-SHADOW-COLOR: #006699; SCROLLBAR-3DLIGHT-COLOR: #006699;
+	SCROLLBAR-ARROW-COLOR: #006699; SCROLLBAR-TRACK-COLOR: #F2F3FB;
+	SCROLLBAR-DARKSHADOW-COLOR: #F2F3FB;
+}
+
+TD{font-family: "宋体"; font-size: 12px;border-color:buttontext;
+border-left:medium none; border-right: medium none; 
+border-top :medium none; border-bottom:medium none;
+}
+
+TR.H {	BACKGROUND-COLOR: #EFF5F1}white {  font-family: "宋体"; font-size: 12px; color: #FFFFCC}
+TR.B {	BACKGROUND-COLOR: #D8EBED}white {  font-family: "宋体"; font-size: 12px; color: #FFFFCC}
+TR.T {	BACKGROUND-COLOR: #76BBCF}white {  font-family: "宋体"; font-size: 12px; color: #CC3300}
+
+A {font-size: 12px; text-decoration: none; font-family: 宋体; color: #660099}
+A:link {COLOR: blue; FONT-SIZE: 12px}
+A:visited {COLOR: blue; FONT-SIZE: 12px}
+A:active {COLOR: #990099; FONT-SIZE: 12px}
+A:hover {font-size: 12px;color: #DB6D00;font-family: 宋体;text-decoration: none;}
+
+input.button {
+	font-family: "宋体";
+	font-size: 12px;
+	background-image: url(../images/button/bgbtn2_0.gif);
+	border: none;
+	height: 20px;
+	width: 40px;
+	cursor: hand;
+}
+input.but3{
+	font-family: "宋体";
+	font-size: 12px;
+	background-image: url(../images/button/bgbtn3_0.gif);
+	border: none;
+	height: 22px;
+	width: 62px;
+	cursor: hand;
+}
+
+input.but20 {
+	font-family: "宋体";font-size: 12px;border: none;cursor: hand;	
+	background-image: url(../images/button/bgbtn2_0.gif);
+	height: 20px;width: 40px;}
+.but21 {
+	font-family: "宋体";font-size: 12px;border: none;cursor: hand;	
+	background-image: url(../images/button/bgbtn2_1.gif);
+	height: 20px;width: 40px;}
+
+input.but40 {
+	font-family: "宋体";font-size: 12px;border: none;cursor: hand;	
+	background-image: url(../images/button/bgbtn4_0.gif);
+	height: 20px;width: 65px;}
+.but41 {
+	font-family: "宋体";font-size: 12px;border: none;cursor: hand;	
+	background-image: url(../images/button/bgbtn4_1.gif);
+	height: 20px;width: 65px;}
+
+
+Span {COLOR: blue; FONT-SIZE: 12px; TEXT-DECORATION: none}
+.a {TEXT-DECORATION: underline}

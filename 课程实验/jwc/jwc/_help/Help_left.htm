@@ -1,0 +1,66 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>目录树</title>
+<link href="../_style/styles_help.css" rel="stylesheet" type="text/css">
+<script language="JavaScript">
+<!--
+function showLay(divId){
+	var objDiv = eval(divId);
+	if (objDiv.style.display=="none"){
+		eval("img"+divId+".src='../images/help/-1.gif'");
+		objDiv.style.display="";
+	}else{
+		eval("img"+divId+".src='../images/help/+1.gif'");
+		objDiv.style.display="none";
+	}
+}
+
+function ToLink(Tcase)
+{		
+	var whichEl;
+			
+	if(Tcase==0){
+        parent.left.document.location.href='tree_left.htm';
+	}else{
+	parent.right.document.location.href=Tcase.value;
+	}
+}
+// -->
+</script>
+</head>
+
+<body leftmargin="6" topmargin="16" marginwidth="0" marginheight="0">
+<!--第1层-->
+<span onclick=showLay('Layer1')> <img src="../images/help/-1.gif" width="31" id=imgLayer1>&nbsp;试用说明 
+<br>
+</span> 
+
+<div id="Layer1" style="display:none_"> 
+<span id=a value=a_UID-PWD.htm title='' onclick=ToLink(this)>
+	<img src="../images/help/tree.gif" width="55" height="18">&nbsp;<a href="#">试用帐号</a>
+</span>
+<span id=a value=a_TestData.htm title='' onclick=ToLink(this)>
+	<img src="../images/help/tree.gif" width="55" height="18">&nbsp;<a href="#">试用数据清单</a> 
+</span>
+</div>
+
+<!--第2层-->
+<span onclick=showLay('Layer2')> 
+<img src="../images/help/+1.gif" width="31" id=imgLayer2>&nbsp;系统约定<br>
+</span> 
+<div id="Layer2" style="display:none;">
+<img src="../images/help/tree.gif" width="55" height="18"> 
+<span id=a value=b_idpass.htm title='' onclick=ToLink(this)>
+<a href="#"> 帐号与初始密码</a>
+</span>
+<img src="../images/help/tree.gif" width="55" height="18">
+<span id=a value=b_print.htm title='' onclick=ToLink(this)>
+<a href="#" >打印与页面设置</a>
+</span>
+</div>
+
+
+</body>
+</html>

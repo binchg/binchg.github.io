@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+<title>dropzone上传插件 - 光年(Light Year Admin)后台管理系统模板</title>
+<link rel="icon" href="favicon.ico" type="image/ico">
+<meta name="keywords" content="LightYear,光年,后台模板,后台管理系统,光年HTML模板">
+<meta name="description" content="LightYear是一个基于Bootstrap v3.3.7的后台管理系统的HTML模板。">
+<meta name="author" content="yinqi">
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/materialdesignicons.min.css" rel="stylesheet">
+<!--使用自定义主题的时候可不应用这两样式文件-->
+<link rel="stylesheet" href="js/dropzone/min/basic.min.css" />
+<link rel="stylesheet" href="js/dropzone/min/dropzone.min.css" />
+<link href="css/style.min.css" rel="stylesheet">
+<style>
+/*
+#total-progress {
+  opacity: 0;
+  transition: opacity 0.3s linear;
+}
+*/
+#previews .file-row.dz-success .progress {
+  opacity: 0;
+  transition: opacity 0.3s linear;
+}
+#previews .file-row .delete {
+  display: none;
+}
+#previews .file-row.dz-success .start,
+#previews .file-row.dz-success .cancel {
+  display: none;
+}
+#previews .file-row.dz-success .delete {
+  display: block;
+}
+.dropzone-preview {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fafafa;
+}
+.dropzone-preview img {
+  max-width: 100%;
+  max-height: 110px;
+}
+.dropzone-message .dropzone-name {
+  margin-top: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+#previews li {
+  margin-bottom: 10px;
+}
+@media screen and (max-width: 420px) {
+  #example-uploads .btn span {
+    display: none;
+  }
+}
+@media screen and (max-width: 380px) {
+  .dropzone-btns .btn span {
+    display: none;
+  }
+}
+</style>
+</head>
+  
+<body>
+<div class="container-fluid">
+  
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header"><h4>上传插件 dropzone</h4></div>
+        <div class="card-body">
+          
+          <p>这里演示的是自定义主题的使用方法，示例最主要的就是使用这个方式。</p>
+          <form action="#!" method="post" id="example-from" onsubmit="return false;" class="row">
+            <div class="form-group col-md-12">
+              <label>多图上传</label>
+              <div id="example-uploads" class="m-b-10">
+                <span class="btn btn-success fileinput-button">
+                  <i class="mdi mdi-plus"></i>
+                  <span>添加文件...</span>
+                </span>
+                <button type="submit" class="btn btn-primary start">
+                  <i class="mdi mdi-cloud-upload"></i>
+                  <span>开始上传</span>
+                </button>
+                <button type="reset" class="btn btn-warning cancel">
+                  <i class="mdi mdi-cancel"></i>
+                  <span>取消上传</span>
+                </button>
+              </div>
+              
+              <!--总体进度条，这里不用，如果你需要，可以打开（包括上面的样式和下面的js处理）
+              <div class="fileupload-process">
+                <div id="total-progress" class="progress progress-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+                  <div class="progress-bar progress-bar-success" style="width:0%;" data-dz-uploadprogress></div>
+                </div>
+              </div>
+              -->
+              
+              <!--重设上传主题-->
+              <ul class="list-inline clearfix" id="previews">
+                <li id="template" class="file-row col-xs-6 col-sm-3 col-md-2">
+                  <!-- 它用作文件预览模板 -->
+                  <div class="dropzone-preview">
+                    <img data-dz-thumbnail />
+                    <input type="hidden" class="pic_hidden_url" name="picurl[]" value="" />
+                  </div>
+                  <div class="dropzone-message">
+                    <p class="dropzone-name" data-dz-name></p>
+                    <strong class="error text-danger" data-dz-errormessage></strong>
+                  </div>
+                  <div class="dropzone-progress">
+                    <p class="dropzone-size" data-dz-size></p>
+                    <div class="progress progress-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+                      <div class="progress-bar progress-bar-success" style="width:0%;" data-dz-uploadprogress></div>
+                    </div>
+                  </div>
+                  <div class="dropzone-btns">
+                    <button class="btn btn-primary btn-sm start">
+                      <i class="mdi mdi-upload"></i>
+                      <span>上传</span>
+                    </button>
+                    <button data-dz-remove class="btn btn-warning btn-sm cancel">
+                      <i class="mdi mdi-cancel"></i>
+                      <span>取消</span>
+                    </button>
+                    <button data-dz-remove class="btn btn-danger btn-sm delete">
+                      <i class="mdi mdi-delete"></i>
+                      <span>删除</span>
+                    </button>
+                  </div>
+                </li>
+              </ul>
+              <!--End 重设上传主题-->
+            </div>
+            <div class="form-group col-md-12">
+              <button type="submit" class="btn btn-primary ajax-post">确 定</button>
+            </div>
+          </form>
+          
+          <p>默认的使用情况。</p>
+          <div id="example-dropzone" class="dropzone"></div>
+          
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  
+</div>
+  
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/dropzone/min/dropzone.min.js"></script>
+<script type="text/javascript">
+$(function() {
+    // 表单提交
+    $('.ajax-post').click(function(){
+        console.log($('#example-from').serialize());
+    });
+  
+    // 默认使用情况
+    $("#example-dropzone").dropzone({
+        url: "upload.php",
+        dictDefaultMessage: '拖动文件至此或者点击上传',
+        method: "post",  // 也可用put
+        paramName: "file", // 默认为file
+        maxFiles: 1,// 一次性上传的文件数量上限
+        maxFilesize: 2, // 文件大小，单位：MB
+        acceptedFiles: ".jpg,.gif,.png,.jpeg", // 上传的类型
+        addRemoveLinks: true,
+        parallelUploads: 1,// 一次上传的文件数量
+        dictDefaultMessage: '拖动文件至此或者点击上传',
+        dictMaxFilesExceeded: "您最多只能上传1个文件！",
+        dictResponseError: '文件上传失败!',
+        dictInvalidFileType: "文件类型只能是*.jpg,*.gif,*.png,*.jpeg。",
+        dictFallbackMessage: "浏览器不受支持",
+        dictFileTooBig: "文件过大上传文件最大支持.",
+        dictRemoveLinks: "删除",
+        dictCancelUpload: "取消",
+        init: function () {
+            this.on("addedfile", function (file) {
+                // 上传文件时触发的事件
+            });
+            this.on("success", function (file, data) {
+                // 上传成功触发的事件
+            });
+            this.on("error", function (file, data) {
+                // 上传失败触发的事件
+            });
+            this.on("removedfile", function (file) {
+                // 删除文件时触发的方法
+            });
+        }
+    });
+    
+    
+    /**
+     * 以下是自定义主题的使用
+     */
+    
+    // 获取模板HTML并将其从文档中删除
+    var previewNode = document.querySelector("#template");
+    previewNode.id = "";
+    var previewTemplate = previewNode.parentNode.innerHTML;
+    previewNode.parentNode.removeChild(previewNode);
+    
+    Dropzone.autoDiscover = false;
+    var myDropzone = new Dropzone(document.body, {
+        url: "upload.php?type=dropzone",   // 文件提交地址
+        method: "post",      // 也可用put
+        acceptedFiles: ".png,.gif,.jpg,.jpeg", // 允许上传的文件格式
+        thumbnailWidth: 165,  // 设置缩略图的缩略比
+        thumbnailHeight: 110, // 就像 thumbnailWidth一样。如果为空, 将不能重置尺寸。
+        parallelUploads: 20,  // 要并行处理的文件上载数量
+        maxFilesize: 2,       // 最大上传文件大小(MB)
+        
+        autoQueue: false,                 // 确保在手动添加之前文件不会排队
+        previewTemplate: previewTemplate, // 主题模板
+        previewsContainer: "#previews",   // 上传图片的预览窗口
+        clickable: ".fileinput-button",   // 定义应该用作单击触发器以选择文件的元素
+        
+        dictResponseError: '文件上传失败!',
+        dictInvalidFileType: "文件类型只能是*.jpg,*.gif,*.png,*.jpeg",
+        dictFallbackMessage: "浏览器不受支持",
+        dictFileTooBig: "文件超过最大限制(2M)",
+    });
+    
+    myDropzone.on("addedfile", function(file) {
+        // 连接开始按钮
+        file.previewElement.querySelector(".start").onclick = function() { myDropzone.enqueueFile(file); };
+    });
+    
+    myDropzone.on("totaluploadprogress", function(progress) {
+        // 更新总进度条
+        //$("#total-progress .progress-bar").css('width', progress + "%");
+    });
+
+    myDropzone.on("sending", function(file) {
+        // 上传开始时显示总进度条
+        //$("#total-progress").css('opacity', 1);
+        // 并禁用“开始”按钮
+        file.previewElement.querySelector(".start").setAttribute("disabled", "disabled");
+    });
+
+    myDropzone.on("queuecomplete", function(progress) {
+        // 当没有东西上传时隐藏总进度条
+        //$("#total-progress").css('opacity', 0);
+    });
+    
+    myDropzone.on("success", function(file, response) {
+        // 这里假设返回格式为{"status":200,"info":"成功","picurl":".\/upload\/lyear_5ddfc00174bbb.jpg"}
+        var resData = JSON.parse(response);
+        if (resData.status == '200') {
+            file.previewElement.querySelector('.pic_hidden_url').setAttribute('value', resData.picurl);
+        } else {
+            alert(resData.tips);
+        }
+    });
+  
+    myDropzone.on("error", function(file, errorMessage){
+        //不接受该文件（非定义的可接受类型）或上传失败
+    	alert(errorMessage);
+    	myDropzone.removeFile(file);
+    });
+
+    // 设置所有传输的按钮，"add files" 按钮不需要设置，因为 `clickable` 已指定。
+    $("#example-uploads .start").on('click', function() {
+        myDropzone.enqueueFiles(myDropzone.getFilesWithStatus(Dropzone.ADDED));
+    })
+    $("#example-uploads .cancel").on('click', function() {
+        myDropzone.removeAllFiles(true);
+    });
+    
+    // 下面用以回显已上传的图片，编辑时可用
+    // 后端存储多图片的方式，1、json保存图片信息，如下；2、有独立的附件表单独存储，相关的地方只保存id值
+    // 这里以保存json为例，上传时可增加更多的隐藏域来保存上传成功后的图片信息，修改时直接返回，存id同理组装一下数据即可。
+    
+    var testJson = [{"size":"11626","name":"lyear_5ddf86dc9454a.jpeg","picurl":".\/upload\/images\/lyear_5ddf86dc9454a.jpeg"},{"size":"122127","name":"lyear_5ddf86dc94c00.png","picurl":".\/upload\/images\/lyear_5ddf86dc94c00.png"}];
+    
+    for(var val in testJson) {
+        var mockFile = {
+            size: testJson[val].size,  // 元素大小
+            name: testJson[val].name, // 元素名称
+            type: '.png,.gif,.jpg,.jpeg', // 元素类型
+        };
+        myDropzone.addFile(mockFile);                                 // 添加mock元素到显示区域
+        myDropzone.options.thumbnail(mockFile, testJson[val].picurl); // 给mock元素添加数据源
+        myDropzone.options.success(mockFile);                         // 给mock元素绘制上传成功标识
+        mockFile.status = 'success';                                  // 设定为已成功的状态
+        mockFile.previewElement.querySelector('.pic_hidden_url').setAttribute('value', testJson[val].picurl);
+    }
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,173 @@
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<STYLE type="text/css">
+Input.butF1{
+	background-color: #8EC58A;
+	height: 18px;width:25px;
+	border: 1px solid #000000;
+	cursor: hand;}
+.butF2{
+	background-color: #8EC58A;
+	height: 18px;width:30px;
+	border: 1px solid #000000;
+	cursor: hand;}
+.butF3{
+	background-color: #8EC58A;
+	height: 18px;width:45px;
+	border: 1px solid #000000;
+	cursor: hand;}
+</STYLE>
+<script language="javaScript">
+var vXSFB,bReg;
+
+function TestValue(theObj)
+{var i,bReg,vStr=theObj.value;
+
+bReg=isNaN(vStr); //bReg=vStr.match(/(\d)+/)!=null;
+if(vStr!='') if(bReg){ //alert('必须为数字！');
+theObj.value=vStr.substring(0,vStr.length-1);
+theObj.focus();return false;}
+
+if(theObj.name=='zxf') return false;
+if((vStr==' ')||(vStr=='   '))theObj.value='';GetZXS();
+}
+
+function GetZXS()
+{var sjxs=0;syxs=0;jsxs=0;qtxs=0;
+jsxs=(document.all.jsxs.value=='') ? '0':document.all.jsxs.value;
+syxs=(document.all.syxs.value=='') ? '0':document.all.syxs.value;
+sjxs=(document.all.sjxs.value=='') ? '0':document.all.sjxs.value;
+qtxs=(document.all.qtxs.value=='') ? '0':document.all.qtxs.value;
+document.all.zxs.value=parseInt(qtxs)+parseInt(jsxs)+parseInt(syxs)+parseInt(sjxs);
+}
+
+function sel_num(thisID)
+{
+vXSFB=document.all.xsfb.value;
+var bReg=vXSFB.match(/(\d|#)$/)!=null;
+if(bReg) document.all.xsfb.value=vXSFB+thisID.value;
+}
+
+function sel_but(thisID)
+{
+vXSFB=document.all.xsfb.value;
+var bReg=(vXSFB.match(/(,)$/)!=null)||(vXSFB=='');
+if(bReg) document.all.xsfb.value=vXSFB+thisID;
+}
+
+
+function sel_spl(thisID)
+{
+vXSFB=document.all.xsfb.value;
+vStr=vXSFB.substring(vXSFB.length-1,vXSFB.length);
+vStr=vStr.charCodeAt(0);
+if ((parseInt(vStr)>=48)&&(parseInt(vStr)<=59)) document.all.xsfb.value=document.all.xsfb.value+thisID.value;
+else return false;
+}
+
+function sel_del(thisID)
+{
+vXSFB=document.all.xsfb.value;
+var bReg=vXSFB.match(/(\d|,)$/)!=null;
+if(bReg){Str=vXSFB.substring(vXSFB,vXSFB.length-1,vXSFB.length);}
+else {Str=vXSFB.substring(vXSFB,vXSFB.length-2,vXSFB.length);}
+document.all.xsfb.value=Str;
+}
+
+function FrBe(theForm){
+var vStr,vID,vXsStr;
+var jsxs=0,syxs=0,sjxs=0,qtxs=0;
+try{vID=theForm.cddw.options[theForm.cddw.selectedIndex].value;}catch(e){vID='';}
+if(vID==""){ alert('请选择承担单位！');theForm.cddw.focus();return false;}
+
+if(theForm.zwmc.value == "")
+{ alert('中文名称不能为空！');theForm.zwmc.focus();return false;}
+
+vStr=theForm.zxf.value;if(vStr=='')
+{ alert('学分不能为空！');theForm.zxf.focus();return false;}
+else if(isNaN(vStr))
+{ alert('学分必须为数字！');theForm.zxf.select();return false;}
+else if(vStr<=0)
+{ alert('学分必须大于0！');theForm.zxf.select();return false;}
+else if(vStr>20)
+{alert('学分必须小于20！');theForm.zxf.select();return false;}
+
+vStr=theForm.jsxs.value;if(vStr!='')if(isNaN(vStr))
+{ alert('讲授学时必须为数字！');theForm.jsxs.select();return false;}
+
+vStr=theForm.syxs.value;if(vStr!='')if(isNaN(vStr))
+{ alert('实验学时必须为数字！');theForm.syxs.select();return false;}
+
+vStr=theForm.sjxs.value;if(vStr!='')if(isNaN(vStr))
+{ alert('上机学时必须为数字！');theForm.sjxs.select();return false;}
+
+vStr=theForm.qtxs.value;if(vStr!='')if(isNaN(vStr))
+{ alert('其它学时必须为数字！');theForm.qtxs.select();return false;}
+
+if(document.all.zxs.value=='0'){alert('学时必须有一项不为空');theForm.jsxs.select();return false;}
+
+xsfb=theForm.xsfb.value;
+if (xsfb!=''){ 
+var bReg=xsfb.match(/(\d)$/)!=null;
+if(!bReg){alert('无效的表达式');return false;}
+var s,xsfb=document.all.xsfb.value;zxs_str=document.all.zxs.value;
+var ss = new Array(20);
+var i=0,js_xs=0,sy_xs=0,sj_xs=0,qt_xs=0;
+if(xsfb.search(',')!=0){ss=xsfb.split(',');}
+else if(xsfb.search(',')==0){ss=xsfb;}
+while(typeof(ss[i])!='undefined'){
+     s=ss[i];
+     if(s.substring(0,1)=='T'){js_xs=js_xs+parseInt(s.substring(2,s.length));}
+     if(s.substring(0,1)=='E'){sy_xs=sy_xs+parseInt(s.substring(2,s.length));}
+     if(s.substring(0,1)=='C'){sj_xs=sj_xs+parseInt(s.substring(2,s.length));}
+     if(s.substring(0,1)=='Q'){qt_xs=qt_xs+parseInt(s.substring(2,s.length));}
+     i++;
+ }
+jsxs=(document.all.jsxs.value=='') ? '0':document.all.jsxs.value;
+syxs=(document.all.syxs.value=='') ? '0':document.all.syxs.value;
+sjxs=(document.all.sjxs.value=='') ? '0':document.all.sjxs.value;
+qtxs=(document.all.qtxs.value=='') ? '0':document.all.qtxs.value;
+
+ if (js_xs!=jsxs){alert('讲授学时序列与讲授学时不相等!');return false;}
+ if (sy_xs!=syxs){alert('实验学时序列与实验学时不相等!');return false;}
+ if (sj_xs!=sjxs){alert('上机学时序列与上机学时不相等!');return false;}
+ if (qt_xs!=qtxs){alert('其它时序列与其它学时不相等!');return false;}
+}return true;
+
+}
+</script>
+<table width="320" border="0" ID="Table1">
+	<tr>
+		<td height="15" align="left">学时分布序列&nbsp;<input type=text readonly name="xsfb"  height="15" value="" size=32 maxlength=50 ID="Text1"></td>
+	</tr>
+	<tr height="15">
+		<td>
+			<input type="button" name="xsfb_button" value="1" class="butF1" onclick="sel_num(this)"
+				ID="Button1"> <input type="button" name="xsfb_button" value="2" class="butF1" onclick="sel_num(this)"
+				ID="Button2"> <input type="button" name="xsfb_button" value="3" class="butF1" onclick="sel_num(this)"
+				ID="Button3"> <input type="button" name="xsfb_button" value="4" class="butF1" onclick="sel_num(this)"
+				ID="Button4"> <input type="button" name="xsfb_button" value="5" class="butF1" onclick="sel_num(this)"
+				ID="Button5"> <input type="button" name="xsfb_button" value="," class="butF2" onclick="sel_spl(this)"
+				title='间隔符' ID="Button6"> &nbsp;&nbsp; <input type="button" name="xsfb_button" value="讲授T" class="butF3" onclick="sel_but('T#')"
+				title='讲授学时' ID="Button7"> <input type="button" name="xsfb_button" value="实验E" class="butF3" onclick="sel_but('E#')"
+				title='实验学时' ID="Button8">
+		</td>
+	</tr>
+	<tr height="15">
+		<td>
+			<input type="button" name="xsfb_button" value="6" class="butF1" onclick="sel_num(this)"
+				ID="Button9"> <input type="button" name="xsfb_button" value="7" class="butF1" onclick="sel_num(this)"
+				ID="Button10"> <input type="button" name="xsfb_button" value="8" class="butF1" onclick="sel_num(this)"
+				ID="Button11"> <input type="button" name="xsfb_button" value="9" class="butF1" onclick="sel_num(this)"
+				ID="Button12"> <input type="button" name="xsfb_button" value="0" class="butF1" onclick="sel_num(this)"
+				ID="Button13"> <input type="button" name="xsfb_button" value="C" class="butF2" onclick="sel_del(this)"
+				title='撤销' ID="Button14"> &nbsp;&nbsp; <input type="button" name="xsfb_button" value="上机C" class="butF3" onclick="sel_but('C#')"
+				title='上机学时' ID="Button15"> <input type="button" name="xsfb_button" value="其它Q" class="butF3" onclick="sel_but('Q#')"
+				title='其它学时' ID="Button16">
+		</td>
+	</tr>
+	<tr height="15">
+		<td colspan="1" valign="top"><font style="color:blue"> T16,E8,C4,Q2表示：讲授16学时，实验8学时，上机4学时，其它2学时
+			</font>
+		</td>
+	</tr>
+</table>

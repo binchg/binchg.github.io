@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+<title>下拉选择框 - 光年(Light Year Admin)后台管理系统模板</title>
+<link rel="icon" href="favicon.ico" type="image/ico">
+<meta name="keywords" content="LightYear,光年,后台模板,后台管理系统,光年HTML模板">
+<meta name="description" content="LightYear是一个基于Bootstrap v3.3.7的后台管理系统的HTML模板。">
+<meta name="author" content="yinqi">
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/materialdesignicons.min.css" rel="stylesheet">
+<link href="js/select2/select2.min.css" rel="stylesheet">
+<link href="css/style.min.css" rel="stylesheet">
+<style>
+.select2-container {
+    width: 100%!important;
+}
+.temp-img-flag {
+    height: 18px;
+    vertical-align: top;
+}
+</style>
+</head>
+  
+<body>
+<div class="container-fluid">
+  
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header"><h4>下拉选择框 select2</h4></div>
+        <div class="card-body">
+          
+          <div class="row">
+            <div class="col-md-6">
+              <p>默认</p>
+              <div class="form-group">
+                <label for="example-select">你是一名</label>
+                <select class="form-control js_select2" name="example-1" id="example-select">
+                  <option value>请选择</option>
+                  <option value="1">平面设计</option>
+                  <option value="2">程序员</option>
+                  <option value="3">前端工程师</option>
+                  <option value="4">产品经理</option>
+                </select>
+              </div>
+              <p>多选</p>
+              <div class="form-group">
+                <label for="example-select3">你最擅长</label>
+                <select class="form-control js_multi_select2" name="example-3" id="example-select3" multiple="multiple">
+                  <option value>请选择</option>
+                  <option value="1">潜水</option>
+                  <option value="2">摸鱼</option>
+                  <option value="3">抬杠</option>
+                  <option value="4">放鸽子</option>
+                </select>
+              </div>
+              <p>限制选择的数量</p>
+              <div class="form-group">
+                <label for="example-select5">如果你落难到荒岛，你会选择</label>
+                <select class="form-control js_multi_list_select2" name="example-5" id="example-select5" multiple="multiple">
+                  <option value="1">手电</option>
+                  <option value="2">小刀</option>
+                  <option value="3">急救包</option>
+                  <option value="4">打火机</option>
+                  <option value="5">一个美女</option>
+                </select>
+              </div>
+              <p>禁用的选项</p>
+              <div class="form-group">
+                <label for="example-select7">我有一辆</label>
+                <select class="form-control js_disabled_option_select2" name="example-7" id="example-select7">
+                  <option value>请选择</option>
+                  <option value="1">自行车</option>
+                  <option value="2">三轮车</option>
+                  <option value="3" disabled>奥迪A6</option>
+                  <option value="4">玩具车</option>
+                </select>
+              </div>
+              <p>禁用下拉选择</p>
+              <div class="form-group">
+                <label for="example-select9">2019</label>
+                <select class="form-control js_disabled_select2" name="example-9" id="example-select9">
+                  <option value="1">我太难了</option>
+                  <option value="2">琦耻大辱</option>
+                  <option value="3">我居然停住球了</option>
+                  <option value="4">上上签</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <p>使用主题</p>
+              <div class="form-group">
+                <label for="example-select2">你是一名</label>
+                <select class="form-control js_theme_select2" name="example-2" id="example-select2">
+                  <option value>请选择</option>
+                  <option value="1">平面设计</option>
+                  <option value="2">程序员</option>
+                  <option value="3">前端工程师</option>
+                  <option value="4">产品经理</option>
+                </select>
+              </div>
+              <p>带提示占位字符</p>
+              <div class="form-group">
+                <label for="example-select4">我想要...</label>
+                <select class="form-control js_placeholder_select2" name="example-4" id="example-select4">
+                  <option></option><!--需要一个空的option作为第一个选项-->
+                  <option value="1">500万</option>
+                  <option value="2">一栋楼</option>
+                  <option value="3">美女</option>
+                  <option value="4">赚他一个亿</option>
+                  <option value="5">洗洗睡吧</option>
+                </select>
+              </div>
+              <p>数组赋值</p>
+              <div class="form-group">
+                <label for="example-select6">哈哈，我发现了...</label>
+                <select class="form-control js_array_select2" name="example-6" id="example-select6"></select>
+              </div>
+              <p>隐藏搜索框</p>
+              <div class="form-group">
+                <label for="example-select8">你用什么浏览器</label>
+                <select class="form-control js_hide_search_select2" name="example-8" id="example-select8">
+                  <option value="1">谷歌</option>
+                  <option value="2">百度</option>
+                  <option value="3">360</option>
+                  <option value="4">火狐</option>
+                  <option value="5">IE</option>
+                  <option value="6">搜狗</option>
+                  <option value="7">Edge</option>
+                  <option value="8">Opera</option>
+                  <option value="9">猎豹</option>
+                  <option value="10">2345</option>
+                  <option value="11">UC</option>
+                  <option value="12">遨游</option>
+                  <option value="13">QQ</option>
+                  <option value="14">Safari</option>
+                  <option value="15">世界之窗</option>
+                  <option value="16">蚂蚁</option>
+                  <option value="17">小智</option>
+                  <option value="18">糖果</option>
+                  <option value="19">我太难了</option>
+                </select>
+              </div>
+              <p>自定义模板</p>
+              <div class="form-group">
+                <label for="example-select10">你知道哪个国家</label>
+                <select class="form-control js_template_select2" name="example-10" id="example-select10"></select>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  
+</div>
+
+<select class="hide js-source-states">
+  <optgroup label="Alaskan/Hawaiian Time Zone">
+    <option value="AK">Alaska</option>
+    <option value="HI">Hawaii</option>
+  </optgroup>
+  <optgroup label="Pacific Time Zone">
+    <option value="CA">California</option>
+    <option value="NV">Nevada</option>
+    <option value="OR">Oregon</option>
+    <option value="WA">Washington</option>
+  </optgroup>
+  <optgroup label="Mountain Time Zone">
+    <option value="AZ">Arizona</option>
+    <option value="CO">Colorado</option>
+    <option value="ID">Idaho</option>
+    <option value="MT">Montana</option>
+    <option value="NE">Nebraska</option>
+    <option value="NM">New Mexico</option>
+    <option value="ND">North Dakota</option>
+    <option value="UT">Utah</option>
+    <option value="WY">Wyoming</option>
+  </optgroup>
+  <optgroup label="Central Time Zone">
+    <option value="AL">Alabama</option>
+    <option value="AR">Arkansas</option>
+    <option value="IL">Illinois</option>
+    <option value="IA">Iowa</option>
+    <option value="KS">Kansas</option>
+    <option value="KY">Kentucky</option>
+    <option value="LA">Louisiana</option>
+    <option value="MN">Minnesota</option>
+    <option value="MS">Mississippi</option>
+    <option value="MO">Missouri</option>
+    <option value="OK">Oklahoma</option>
+    <option value="SD">South Dakota</option>
+    <option value="TX">Texas</option>
+    <option value="TN">Tennessee</option>
+    <option value="WI">Wisconsin</option>
+  </optgroup>
+  <optgroup label="Eastern Time Zone">
+    <option value="CT">Connecticut</option>
+    <option value="DE">Delaware</option>
+    <option value="FL">Florida</option>
+    <option value="GA">Georgia</option>
+    <option value="IN">Indiana</option>
+    <option value="ME">Maine</option>
+    <option value="MD">Maryland</option>
+    <option value="MA">Massachusetts</option>
+    <option value="MI">Michigan</option>
+    <option value="NH">New Hampshire</option>
+    <option value="NJ">New Jersey</option>
+    <option value="NY">New York</option>
+    <option value="NC">North Carolina</option>
+    <option value="OH">Ohio</option>
+    <option value="PA">Pennsylvania</option>
+    <option value="RI">Rhode Island</option>
+    <option value="SC">South Carolina</option>
+    <option value="VT">Vermont</option>
+    <option value="VA">Virginia</option>
+    <option value="WV">West Virginia</option>
+  </optgroup>
+</select>
+  
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script src="js/select2/select2.min.js"></script>
+<script src="js/select2/i18n/zh-CN.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+    // 默认
+    $('.js_select2').select2();
+    // 选用主题
+    $('.js_theme_select2').select2({
+        theme: "classic"
+    });
+    // 多选
+    $(".js_multi_select2").select2();
+    // 提示占位符
+    $(".js_placeholder_select2").select2({
+        placeholder: "我想要"
+    });
+    // 限制选择个数
+    $(".js_multi_list_select2").select2({
+        maximumSelectionLength: 2,
+        language: "zh-CN"
+    });
+    // 数组赋值
+    var data = [{
+        id: 0,
+        text: '没有BUG'
+    },
+    {
+        id: 1,
+        text: '一个BUG'
+    },
+    {
+        id: 2,
+        text: '两个BUG'
+    },
+    {
+        id: 3,
+        text: '三个BUG'
+    },
+    {
+        id: 4,
+        text: '好多BUG'
+    }];
+    $(".js_array_select2").select2({
+        data: data
+    });
+    // 禁用的选项
+    $(".js_disabled_option_select2").select2();
+    // 隐藏搜索框
+    $(".js_hide_search_select2").select2({
+        minimumResultsForSearch: Infinity
+    });
+    // 禁用下拉选择
+    $(".js_disabled_select2").select2({
+        disabled: true
+    });
+    // 自定义模板
+    var $states = $(".js-source-states");
+    var statesOptions = $states.html();
+    $states.remove();
+    
+    $(".js_template_select2").append(statesOptions);
+    function formatState (state) {
+        if (!state.id) {
+            return state.text;
+        }
+        var baseUrl = "https://select2.org/user/pages/images/flags";
+        var $state = $(
+            '<span><img src="' + baseUrl + '/' + state.element.value.toLowerCase() + '.png" class="temp-img-flag" /> ' + state.text + '</span>'
+        );
+        return $state;
+    };
+    
+    $(".js_template_select2").select2({
+      templateResult: formatState
+    });
+});
+</script>
+</body>
+</html>

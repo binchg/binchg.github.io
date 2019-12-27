@@ -1,0 +1,314 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>目录树</title>
+<link href="../_style/default/styles_help.css" rel="stylesheet" type="text/css">
+<script language="JavaScript">
+<!--
+function showLay(divId){
+	var objDiv = eval(divId);
+	if (objDiv.style.display=="none"){
+		eval("img"+divId+".src='image/-1.gif'");
+		objDiv.style.display="";
+	}else{
+		eval("img"+divId+".src='image/+1.gif'");
+		objDiv.style.display="none";
+	}
+}
+
+function ToLink(Tcase)
+{		
+	var whichEl;
+			
+	if(Tcase==0){
+        parent.left.document.location.href='tree_left.htm';
+	}else{
+	parent.right.document.location.href=Tcase.value;
+	}
+}
+// -->
+</script>
+<style type="text/css">
+<!--
+.style1 {font-size: 12px}
+-->
+</style>
+</head>
+
+<body leftmargin="6" topmargin="16" marginwidth="0" marginheight="0" bgcolor="#E8E8E8">
+	   
+    <span class="style1" onclick=showLay('Layer1')>
+    <!--第1层-->
+    <img src="image/-1.gif" width="31" id=imgLayer1>
+	<span id=a value=XSFW/student.htm title='' onclick=ToLink(this)><a href="#" class=tree>为学生提供的服务</a></span><br>
+	</span> 
+
+<div id="Layer1" style="display:none_; font-size: 12px;">	
+	 <span onclick=showLay('Layer2')> 
+		&nbsp;&nbsp;&nbsp;<img src="image/+1.gif" width="31" id=imgLayer2>
+		<span id=a value=XSFW/1301.htm title='' onclick=ToLink(this)>
+		<a href="#" class=tree>学生学籍</a></span><br>
+	 </span> 
+	 <div id="Layer2" style="display:none;">	 
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="image/1.gif" width="30">
+	<span id=a value=XSFW/130101.htm title='' onclick=ToLink(this)>
+	<a href="#" class=tree> 学籍管理规定</a></span><br>		
+	<span onclick=showLay('Layer8')> 
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;		
+		<img src="image/+1.gif" width="31" id=imgLayer8>
+		<span id=a value=XSFW/130102.htm title='' onclick=ToLink(this)>
+		<a href="#" class=tree>学籍档案</a></span><br>
+	  </span> 
+		<div id="Layer8" style="display:none;"> 
+  	    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="image/tree.gif" width="55" height="18"> 
+        <span id=a value=XSFW/13010201.htm title='' onclick=ToLink(this)>
+        <a href="#" class=tree>基本信息</a></span><br>
+		 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="image/tree.gif" width="55" height="18"> 
+        <span id=a value=XSFW/13010202.htm title='' onclick=ToLink(this)>
+        <a href="#" class=tree>增改基本信息</a></span><br>
+		 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="image/tree.gif" width="55" height="18"> 
+        <span id=a value=XSFW/13010203.htm title='' onclick=ToLink(this)>
+        <a href="#" class=tree>辅修报名</a></span><br>
+		 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="image/tree.gif" width="55" height="18"> 
+        <span id=a value=XSFW/13010204.htm title='' onclick=ToLink(this)>
+        <a href="#" class=tree>辅修信息</a></span><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="image/tree.gif" width="55" height="18"> 
+        <span id=a value=XSFW/13010205.htm title='' onclick=ToLink(this)>
+        <a href="#" class=tree>奖惩信息</a></span>
+	 	</div>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<img src="image/1.gif" width="30">
+		<span id=a value=XSFW/130103.htm title='' onclick=ToLink(this)>
+		<a href="#" class=tree> 注册信息</a></span><br>	
+	  <span onclick=showLay('Layer3')> 
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="image/+1.gif" width="31" id=imgLayer3>
+		<span id=a value=XSFW/130104.htm title='' onclick=ToLink(this)>
+		<a href="#" class=tree>学籍异动</a></span><br>
+	  </span> 
+		<div id="Layer3" style="display:none;"> 
+  	    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="image/tree.gif" width="55" height="18"> 
+        <span id=a value=XSFW/13010401.htm title='' onclick=ToLink(this)>
+        <a href="#" class=tree> 学业预警</a></span><br>
+		 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="image/tree.gif" width="55" height="18"> 
+        <span id=a value=XSFW/13010402.htm title='' onclick=ToLink(this)>
+        <a href="#" class=tree> 申请异动</a></span><br>
+		 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="image/tree.gif" width="55" height="18"> 
+        <span id=a value=XSFW/13010403.htm title='' onclick=ToLink(this)>
+        <a href="#" class=tree> 预计异动信息</a></span><br>
+		 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="image/tree.gif" width="55" height="18"> 
+        <span id=a value=XSFW/13010404.htm title='' onclick=ToLink(this)>
+        <a href="#" class=tree> 异动信息</a></span><br>
+	 	</div>
+	  <span onclick=showLay('Layer4')> 
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="image/+1.gif" width="31" id=imgLayer4>
+		<span id=a value=XSFW/130105.htm title='' onclick=ToLink(this)>
+		<a href="#" class=tree>毕业事宜</a></span><br>
+	  </span> 
+		<div id="Layer4" style="display:none;"> 
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="image/tree.gif" width="55" height="18"> 
+        <span id=a value=XSFW/13010501.htm title='' onclick=ToLink(this)>
+        <a href="#" class=tree> 学业进展</a></span><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="image/tree.gif" width="55" height="18"> 
+        <span id=a value=XSFW/13010502.htm title='' onclick=ToLink(this)>
+        <a href="#" class=tree> 申请提前/推迟毕业</a></span><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="image/tree.gif" width="55" height="18"> 
+        <span id=a value=XSFW/13010503.htm title='' onclick=ToLink(this)>
+        <a href="#" class=tree> 毕业审核结论</a></span>
+	 	</div>
+	</div>
+	
+<!--第2层-->
+&nbsp;&nbsp;&nbsp;<img src="image/1.gif" width="30">
+<span id=a value=XSFW/1302.htm title='' onclick=ToLink(this)>
+<a href="#" class=tree> 培养方案</a></span><br>
+
+<!--第3层-->
+<span onclick=showLay('Layer5')> 
+&nbsp;&nbsp;&nbsp;<img src="image/+1.gif" width="31" id=imgLayer5>
+<span id=a value=XSFW/1303.htm title='' onclick=ToLink(this)>
+<a href="#" class=tree>网上选课</a></span><br>
+</span> 
+<div id="Layer5" style="display:none;">
+  &nbsp;&nbsp;
+  <img src="image/tree.gif" width="55" height="18"> 
+  <span id=a value=XSFW/130301.htm title='' onclick=ToLink(this)>
+  <a href="#" class=tree> 选课管理规定</a></span><br>
+  &nbsp;&nbsp;
+  <img src="image/tree.gif" width="55" height="18"> 
+  <span id=a value=XSFW/130302.htm title='' onclick=ToLink(this)>
+  <a href="#" class=tree> 预选</a></span><br>
+  &nbsp;&nbsp;
+  <img src="image/tree.gif" width="55" height="18">
+  <span id=a value=XSFW/130303.htm title='' onclick=ToLink(this)>
+  <a href="#" class=tree> 预选结果</a></span><br>
+  &nbsp;&nbsp;
+  <img src="image/tree.gif" width="55" height="18">
+  <span id=a value=XSFW/130304.htm title='' onclick=ToLink(this)>
+  <a href="#" class=tree> 正选</a></span><br>
+  &nbsp;&nbsp;
+  <img src="image/tree.gif" width="55" height="18"> 
+  <span id=a value=XSFW/130305.htm title='' onclick=ToLink(this)>
+  <a href="#" class=tree> 正选结果</a></span><br>
+  &nbsp;&nbsp;
+  <img src="image/tree.gif" width="55" height="18"> 
+  <span id=a value=XSFW/130306.htm title='' onclick=ToLink(this)>
+  <a href="#" class=tree> 补选</a></span><br>
+  &nbsp;&nbsp;
+  <img src="image/tree.gif" width="55" height="18">
+  <span id=a value=XSFW/130307.htm title='' onclick=ToLink(this)>
+  <a href="#" class=tree> 退选</a></span><br>
+  &nbsp;&nbsp;
+  <img src="image/tree.gif" width="55" height="18">
+  <span id=a value=XSFW/130308.htm title='' onclick=ToLink(this)>
+  <a href="#" class=tree> 重修选</a></span><br>
+  &nbsp;&nbsp;
+  <img src="image/tree.gif" width="55" height="18">
+  <span id=a value=XSFW/130309.htm title='' onclick=ToLink(this)>
+  <a href="#" class=tree> 重修选结果</a></span><br>
+  &nbsp;&nbsp;
+  <img src="image/tree.gif" width="55" height="18">
+  <span id=a value=XSFW/130310.htm title='' onclick=ToLink(this)>
+  <a href="#" class=tree> 被取消课程</a></span>
+</div>
+
+<!--第4层-->
+&nbsp;&nbsp;&nbsp;<img src="image/1.gif" width="30">
+<span id=a value=XSFW/1304.htm title='' onclick=ToLink(this)>
+<a href="#" class=tree> 教学安排</a></span><br>
+
+<!--第5层-->
+<span onclick=showLay('Layer6')> 
+&nbsp;&nbsp;&nbsp;<img src="image/+1.gif" width="31" id=imgLayer6>
+<span id=a value=XSFW/1305.htm title='' onclick=ToLink(this)>
+<a href="#" class=tree> 考试安排</a></span> <br>
+</span> 
+<div id="Layer6" style="display:none;">
+  &nbsp;&nbsp;
+  <img src="image/tree.gif" width="55" height="18"> 
+  <span id=a value=XSFW/130501.htm title='' onclick=ToLink(this)>
+  <a href="#" class=tree> 考试管理规定</a></span><br>
+  &nbsp;&nbsp;
+  <img src="image/tree.gif" width="55" height="18"> 
+  <span id=a value=XSFW/130502.htm title='' onclick=ToLink(this)>
+  <a href="#" class=tree> 申请补考</a></span><br>
+  &nbsp;&nbsp;
+  <img src="image/tree.gif" width="55" height="18">
+  <span id=a value=XSFW/130503.htm title='' onclick=ToLink(this)>
+  <a href="#" class=tree> 申请缓考</a></span><br>
+  &nbsp;&nbsp;
+  <img src="image/tree.gif" width="55" height="18">
+  <span id=a value=XSFW/130504.htm title='' onclick=ToLink(this)>
+  <a href="#" class=tree> 考试安排表</a></span><br>
+  &nbsp;&nbsp;
+  <img src="image/tree.gif" width="55" height="18"> 
+  <span id=a value=XSFW/130505.htm title='' onclick=ToLink(this)>
+  <a href="#" class=tree> 考试通报信息</a></span></div>
+
+<!--第6层-->
+<span onclick=showLay('Layer7')> 
+&nbsp;&nbsp;&nbsp;<img src="image/+1.gif" width="31" id=imgLayer7>
+<span id=a value=XSFW/1306.htm title='' onclick=ToLink(this)>
+<a href="#" class=tree> 学生成绩</a></span> <br>
+</span> 
+<div id="Layer7" style="display:none;">
+  &nbsp;&nbsp;
+  <img src="image/tree.gif" width="55" height="18"> 
+  <span id=a value=XSFW/130601.htm title='' onclick=ToLink(this)>
+  <a href="#" class=tree> 成绩管理规定</a></span><br>
+  &nbsp;&nbsp;
+  <img src="image/tree.gif" width="55" height="18"> 
+  <span id=a value=XSFW/130602.htm title='' onclick=ToLink(this)>
+  <a href="#" class=tree> 申请免修</a></span><br>
+  &nbsp;&nbsp;
+  <img src="image/tree.gif" width="55" height="18">
+  <span id=a value=XSFW/130603.htm title='' onclick=ToLink(this)>
+  <a href="#" class=tree> 获准免修课程/环节</a></span><br>
+  &nbsp;&nbsp;
+  <img src="image/tree.gif" width="55" height="18">
+  <span id=a value=XSFW/130604.htm title='' onclick=ToLink(this)>
+  <a href="#" class=tree> 申请重修</a></span><br>
+  &nbsp;&nbsp;
+  <img src="image/tree.gif" width="55" height="18"> 
+  <span id=a value=XSFW/130605.htm title='' onclick=ToLink(this)>
+  <a href="#" class=tree> 获准重修课程/环节</a></span><br>
+  &nbsp;&nbsp;
+  <img src="image/tree.gif" width="55" height="18"> 
+  <span id=a value=XSFW/130606.htm title='' onclick=ToLink(this)>
+  <a href="#" class=tree> 查看成绩认定记录</a></span><br>
+  &nbsp;&nbsp;
+  <img src="image/tree.gif" width="55" height="18"> 
+  <span id=a value=XSFW/130607.htm title='' onclick=ToLink(this)>
+  <a href="#" class=tree> 查看成绩</a></span><br>
+  &nbsp;&nbsp;
+  <img src="image/tree.gif" width="55" height="18"> 
+  <span id=a value=XSFW/130608.htm title='' onclick=ToLink(this)>
+  <a href="#" class=tree> 成绩分布</a></span><br>
+  &nbsp;&nbsp;
+  <img src="image/tree.gif" width="55" height="18"> 
+  <span id=a value=XSFW/130609.htm title='' onclick=ToLink(this)>
+  <a href="#" class=tree> 等级考试报名</a></span><br>
+  &nbsp;&nbsp;
+  <img src="image/tree.gif" width="55" height="18"> 
+  <span id=a value=XSFW/130610.htm title='' onclick=ToLink(this)>
+  <a href="#" class=tree> 查看等级考试成绩</a></span>
+</div>
+<!--第7层-->
+<span onclick=showLay('Layer9')> 
+&nbsp;&nbsp;&nbsp;<img src="image/+1.gif" width="31" id=imgLayer9>
+<span id=a value=XSFW/1307.htm title='' onclick=ToLink(this)>
+<a href="#" class=tree> 教材信息</a></span> <br>
+</span> 
+<div id="Layer9" style="display:none;">
+  &nbsp;&nbsp;
+  <img src="image/tree.gif" width="55" height="18"> 
+  <span id=a value=XSFW/130701.htm title='' onclick=ToLink(this)>
+  <a href="#" class=tree> 领取教材信息</a></span><br>
+  &nbsp;&nbsp;
+  <img src="image/tree.gif" width="55" height="18"> 
+  <span id=a value=XSFW/130702.htm title='' onclick=ToLink(this)>
+  <a href="#" class=tree> 领取教材对帐</a></span><br>
+  &nbsp;&nbsp;
+  <img src="image/tree.gif" width="55" height="18">
+  <span id=a value=XSFW/130703.htm title='' onclick=ToLink(this)>
+  <a href="#" class=tree> 有售教材信息</a></span><br>
+  &nbsp;&nbsp;
+  <img src="image/tree.gif" width="55" height="18">
+  <span id=a value=XSFW/130704.htm title='' onclick=ToLink(this)>
+  <a href="#" class=tree> 提交课程→需要教材</a></span>
+</div>
+<!--第8层-->
+<span onclick=showLay('Layer10')> 
+&nbsp;&nbsp;&nbsp;<img src="image/+1.gif" width="31" id=imgLayer10>
+<span id=a value=XSFW/1308.htm title='' onclick=ToLink(this)>
+<a href="#" class=tree> 网上评教</a></span> <br>
+</span> 
+<div id="Layer10" style="display:none;">
+  &nbsp;&nbsp;
+  <img src="image/tree.gif" width="55" height="18"> 
+  <span id=a value=XSFW/130801.htm title='' onclick=ToLink(this)>
+  <a href="#" class=tree> 提交问卷调查表</a></span><br>
+  &nbsp;&nbsp;
+  <img src="image/tree.gif" width="55" height="18"> 
+  <span id=a value=XSFW/130802.htm title='' onclick=ToLink(this)>
+  <a href="#" class=tree> 提交教学评价表</a></span>  
+</div>
+<!--第9层-->
+<span onclick=showLay('Layer11')> 
+&nbsp;&nbsp;&nbsp;<img src="image/+1.gif" width="31" id=imgLayer11>
+<span id=a value=XSFW/1309.htm title='' onclick=ToLink(this)>
+<a href="#" class=tree> 论坛</a></span><br>
+</span> 
+<div id="Layer11" style="display:none;">
+  &nbsp;&nbsp;
+  <img src="image/tree.gif" width="55" height="18"> 
+  <span id=a value=XSFW/130901.htm title='' onclick=ToLink(this)>
+  <a href="#" class=tree> 论坛首页</a></span><br></span>
+</div>
+<!--第10层-->
+ &nbsp;&nbsp;&nbsp;</span><img src="image/1.gif" width="30">
+<span id=a value=XSFW/1310.htm title='' onclick=ToLink(this)>
+<a href="#" class=tree> 其它</a></span>
+</div>
+</body>
+</html>

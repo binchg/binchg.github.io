@@ -1,0 +1,27 @@
+<style type="text/css">
+td {
+	font-family: "ËÎÌו";
+	font-size: 12px;
+	text-decoration: none;
+	line-height: 20px;
+
+}
+A:link       {COLOR:#003399;FONT-FAMILY:tahoma;TEXT-DECORATION:none; }
+A:visited    {COLOR:#003399;FONT-FAMILY:tahoma;TEXT-DECORATION:none; }
+A:active     {FONT-FAMILY:tahoma;TEXT-DECORATION:none; }
+A:hover      {COLOR:#5082E6;TEXT-DECORATION:none; border-left-width:1; border-right-width:1; border-top-width:1}
+
+TABLE      {FONT-FAMILY:Tahoma;FONT-SIZE:9pt;COLOR:#000000}
+pre        {FONT-FAMILY:Tahoma;FONT-SIZE:9pt;COLOR:#000000}
+td         { font-family: "Tahoma"; font-size: 9pt;table-layout:fixed;word-break :break-all}
+SELECT	   {BORDER-RIGHT: #000000 1px solid; BORDER-TOP: #000000 1px solid; FONT-SIZE: 12px; BORDER-LEFT: #000000 1px solid; COLOR: #000000; BORDER-BOTTOM: #000000 1px solid; BACKGROUND-COLOR: #f4f4f4
+           }
+TEXTAREA   {scrollbar-face-color: #cccccc; scrollbar-highlight-color: #f5f9ff; 
+               scrollbar-shadow-color: #828282; scrollbar-3dlight-color: 
+               #000000; scrollbar-arrow-color: #797979; 
+               scrollbar-track-color: #cccccc; scrollbar-darkshadow-color: 
+               #000000; BORDER-TOP-WIDTH: 1px; BORDER-LEFT-WIDTH: 1px; FONT-SIZE: 12px; BORDER-BOTTOM-WIDTH: 1px; BACKGROUND-COLOR: #f4f4f4; BORDER-RIGHT-WIDTH: 1px}
+input		{font-size: 12px; background-color: #E8E8E8;border-top-width:1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; font-family:tahoma;color:#000000}
+
+</style>
+

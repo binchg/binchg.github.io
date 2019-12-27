@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+<title>富文本编辑器tinymce - 光年(Light Year Admin)后台管理系统模板</title>
+<link rel="icon" href="favicon.ico" type="image/ico">
+<meta name="keywords" content="LightYear,光年,后台模板,后台管理系统,光年HTML模板">
+<meta name="description" content="LightYear是一个基于Bootstrap v3.3.7的后台管理系统的HTML模板。">
+<meta name="author" content="yinqi">
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/materialdesignicons.min.css" rel="stylesheet">
+<link href="css/style.min.css" rel="stylesheet">
+<style>
+
+</style>
+</head>
+  
+<body>
+<div class="container-fluid">
+  
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header"><h4>富文本编辑器 tinymce</h4></div>
+        <div class="card-body">
+          
+          <form action="#!" method="post" id="example-from">
+            <div class="form-group">
+              <textarea id="testtextarea"></textarea>
+            </div>
+          </form>
+          
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  
+</div>
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script src="js/tinymce/tinymce.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+    tinymce.init({
+    	selector: '#testtextarea',
+    	language: 'zh_CN',
+    	directionality: 'ltl',
+    	browser_spellcheck: true,
+    	contextmenu: false,
+        height: 480,
+    	plugins: [
+    		"advlist autolink lists link image charmap print preview anchor",
+    		"searchreplace visualblocks code fullscreen",
+    		"insertdatetime media table contextmenu paste imagetools wordcount",
+    		"code"
+    	],
+    	toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image | code",
+        images_upload_url: 'upload.php?type=tinymce', // 后端返回的json格式{ location : "/demo/image/1.jpg" }
+    });
+});
+</script>
+</body>
+</html>

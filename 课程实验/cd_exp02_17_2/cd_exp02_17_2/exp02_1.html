@@ -1,0 +1,297 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>canvas绘图演示</title>
+    <style type="text/css">
+        #canvas {
+            border: 0px solid #000;
+            background-color: #93f3c5;
+            display: block;
+            margin: 50px 20px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <input id="btn1" type="button" class="btn" value="中点画圆" style="font-size:18px" onclick="draw_mid_tuoyuan(Number(x.value), Number(y.value), Number(a.value), Number(b.value))">
+    </div>
+    <p>
+        x:<input id="x" type="text" class="txt" value="0" />
+        y:<input id="y" type="text" class="txt" value="0" />
+        a:<input id="a" type="text" class="txt" value="16" />
+        b:<input id="b" type="text" class="txt" value="9" />
+
+    </p>
+    <canvas id="canvas" width="600" height="600">
+        你的浏览器还不支持canvas
+    </canvas>
+
+</body>
+<script type="text/javascript">
+    var canvas = document.getElementById("canvas");
+    var context = canvas.getContext("2d");
+    var width = 15;
+    var px = 600;
+    var py = 600;
+    var cx = px / 2;
+    var cy = py / 2;
+    var lx0 = 0;
+    var ly0 = 0;
+    var la = 0;
+    var lb = 0;
+    //function sleep(d) {
+    //    d = Number(d);
+    //    document.write("|", d, "|");
+    //    var t = Date.now();
+    //    t = Number(t);
+    //    document.write("|", Date.now(), "-", t, "-", t + d, "|");
+    //    var numtime = 0;
+    //    while (Date.now() < t + d) {
+    //        numtime++;
+    //    };
+    //    document.write("|", numtime, "|");
+
+    //}
+    //function sleep(ms) {
+    //    return new Promise(resolve => setTimeout(resolve, ms));
+    //}
+    //初始化坐标轴
+
+    function drawint() {
+        context.clearRect(0, 0, px, py);
+        context.lineWidth = 1;
+        context.setLineDash([5, 2]);
+        context.strokeStyle = "#9d9d9d";
+        //设置对象起始点和终点
+        //画x轴
+        for (var i = 0; i <= (py / width); i++) {
+            if (i % 5 == 0) {
+                context.setLineDash([5, 0]);
+                context.strokeStyle = "#000";
+
+            }
+            context.beginPath();
+            context.moveTo(0, i * width);
+            context.lineTo(py, i * width);
+            context.stroke();
+            context.setLineDash([5, 2]);
+            context.strokeStyle = "#9d9d9d";
+        }
+        //画y轴
+        for (var i = 0; i <= (px / width); i++) {
+            if (i % 5 == 0) {
+                context.setLineDash([5, 0]);
+                context.strokeStyle = "#000";
+
+            }
+            context.beginPath();
+            context.moveTo(i * width, 0);
+            context.lineTo(i * width, py);
+            context.stroke();
+            context.setLineDash([5, 2]);
+            context.strokeStyle = "#9d9d9d";
+        }
+        //横轴
+        context.setLineDash([5, 0]);
+        context.strokeStyle = "#e40f0f";
+        context.lineWidth = 3;
+        context.beginPath();
+        context.moveTo(0, cy);
+        context.lineTo(py, cy);
+        context.stroke();
+        //竖轴
+        context.beginPath();
+        context.moveTo(cx, 0);
+        context.lineTo(cx, py);
+        context.stroke();
+    }
+    //画线
+    function drawline(x1, y1, x2, y2) {
+        context.beginPath();
+        context.lineWidth = 2;
+        context.strokeStyle = "#000";
+        context.moveTo(cx + x1 * width, cy - y1 * width);
+        context.lineTo(cx + x2 * width, cy - y2 * width);
+        context.stroke();
+        context.beginPath();
+    }
+    //画点
+    function drawpoint(x, y) {
+        //画圆
+        context.beginPath();
+        context.fillStyle = "000";
+        context.arc(cx + x * width, cy - y * width, 5, 0, 2 * Math.PI);
+        context.fill();
+        context.closePath();
+    }
+    function tuoyuanpoiont(x0, y0, x, y) {
+
+        drawpoint(x, y);
+        drawpoint(x, 2 * y0 - y);
+        drawpoint(2 * x0 - x, 2 * y0 - y);
+        drawpoint(2 * x0 - x, y);
+    }
+    function circlepoints(x0, y0, x, y) {
+
+        drawpoint(x, y);
+        drawpoint(x, 2 * y0 - y);
+        drawpoint(2 * x0 - x, 2 * y0 - y);
+        drawpoint(2 * x0 - x, y);
+        var dx = x - x0;
+        var dy = y - y0;
+        y = y0 + dx;
+        x = x0 + dy;
+        drawpoint(x, y);
+        drawpoint(x, 2 * y0 - y);
+        drawpoint(2 * x0 - x, 2 * y0 - y);
+        drawpoint(2 * x0 - x, y);
+
+    }
+    //画圆
+    function draw_circle(x, y, r) {
+        context.beginPath();
+        context.strokeStyle = "#f00";
+        context.arc(cx + x * width, cy - y * width, r * width, 0, 2 * Math.PI);
+        context.stroke();
+        context.closePath();
+    }
+    function draw_mid_cir(x0, y0, r) {
+        var x, y;
+        var d;
+        x = 0; y = r; d = 1.25 - r;
+        circlepoints(x0, y0, x + x0, y + y0); //显示圆弧上的八个对称点
+        while (x <= y) {
+            if (d < 0) d += 2 * x + 3;
+            else { d += 2 * (x - y) + 5; y--; }
+            x++;
+            circlepoints(x0, y0, x + x0, y + y0); //显示圆弧上的八个对称点
+        }
+        draw_circle(x0, y0, r);
+    }
+    function draw_bre_cir(x0, y0, r) {
+        draw_circle(x0, y0, r);
+        var x, y, delta, delta_1, delta_2, direction;
+        x = 0; y = r;
+        delta = 2 * (1 - r);  //△d的初始值
+        Limit = 0;
+        while (y >= Limit) {
+            circlepoints(x0, y0, x0 + x, y0 + y);
+            if (delta < 0) {
+                delta_1 = 2 * (delta + y) - 1;
+                //                  取H点
+                if (delta_1 <= 0) direction = 1;
+                else direction = 2; //取D点
+            }
+            else if (delta > 0) {
+                delta_2 = 2 * (delta–x) -1;//                  取D点
+                if (delta_2 < 0) direction = 2;
+                else direction = 3; //取V点
+            }
+            else { direction = 2; }
+
+            if (direction == 1) {
+                x = x + 1;
+                delta = delta + 2 * x + 1;
+
+            }
+            if (direction == 2) {
+                x = x + 1;
+                y = y - 1;
+                delta = delta + 2 * (x - y + 1);
+            }
+            if (direction == 3) {
+                y = -1;
+                delta = delta + (-2 * y + 1);
+            }
+        }
+    }
+    function draw_tuoyuan(x, y, a, b) {
+        context.strokeStyle = "f00";
+        var step = (a > b) ? 1 / a : 1 / b;
+        context.beginPath();
+        context.moveTo(cx + x * width + a * width, cy - y * width); //从椭圆的左端点开始绘制
+        for (var i = 0; i < 2 * Math.PI; i += step) {        //参数方程为x = a * cos(i), y = b * sin(i)，
+            //参数为i，表示度数（弧度）
+            context.lineTo(cx + x * width + a * width * Math.cos(i), cy - y * width + width * b * Math.sin(i));
+        }
+        context.closePath();
+        context.stroke();
+    };
+    function draw_mid_tuoyuan(x0, y0, a, b) {
+        drawint();
+
+
+        //document.write(x0, "-", y0, "-", a, "-", b, "|");
+        //document.write("|", a, "|");
+        draw_tuoyuan(x0, y0, a, b);
+        //document.write("|", a, "|");
+
+        var x = parseInt(a + 1 / 2);
+        //document.write("|",a+1.5,"|");
+        var y = 0;
+        var taa = a * a;
+        var t2aa = 2 * taa;
+        var t4aa = 2 * t2aa;
+        var tbb = b * b;
+        var t2bb = 2 * tbb;
+        var t4bb = 2 * t2bb;
+        var t2abb = a * t2bb;
+        var t2bbx = t2bb * x;
+        var tx = x;
+        var d1 = t2bbx * (x - 1) + tbb / 2 + t2aa * (1 - tbb);
+        while ((t2bb * tx) > (t2aa * y)) {
+            
+            tuoyuanpoiont(x0, y0, x0 + x, y0 + y);
+            //await sleep(100);
+
+            //document.write("(",x,",",y,")");
+            if (d1 < 0) {
+                y = y + 1;
+                d1 = d1 + t4aa * y + t2aa;
+                tx = x - 1;
+            }
+            else {
+                x = x - 1;
+                y = y + 1;
+                d1 = d1 - t4bb * x + t4aa * y + t2aa;
+                tx = x;
+            }
+        }
+        var d2 = t2bb * (x * x + 1) - t4bb * x + t2aa * (y * y + y - tbb) + taa / 2;
+        while (x >= 0) {
+            tuoyuanpoiont(x0, y0, x0 + x, y0 + y);
+            //await sleep(100);
+
+            if (d2 < 0) {
+                x = x - 1;
+                y = y + 1;
+                d2 = d2 + t4aa * y - t4bb * x + t2bb;
+
+            }
+            else {
+                x = x - 1;
+                d2 = d2 - t4bb * x + t2bb;
+            }
+        }
+        //document.write(lx0, ly0, la, lb);
+    }
+    drawint();
+    //drawline(5,2,3,4);
+    //drawline(5, 2, 7, 4);
+    //drawline(5, 2, 3, 6);
+    //drawpoint(2, 2);
+    //circlepoints(2, 3, 3, 9);
+    // draw_mid_cir(-5, 0, 10);
+    //draw_bre_cir(0, 0, 5);
+    //draw_mid_tuoyuan(0, 0, 9, 16);
+    lx0 = Number(x.value);
+    ly0 = Number(y.value);
+    la = Number(a.value);
+    lb = Number(b.value);
+    document.write(lx0, "-", ly0, "-", la, "-", lb, "|");
+    //draw_mid_tuoyuan(lx0, ly0, la, lb);
+    draw_mid_tuoyuan(1,2,3,4);
+</script>
+
+</html>

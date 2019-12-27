@@ -1,0 +1,46 @@
+body {  font-size: 12px; font-family: "宋体"; background-color:#F1F7FD;COLOR:black;
+	SCROLLBAR-FACE-COLOR: #F2F3FB; SCROLLBAR-HIGHLIGHT-COLOR: #F2F3FB;
+	SCROLLBAR-SHADOW-COLOR: #006699; SCROLLBAR-3DLIGHT-COLOR: #006699;
+	SCROLLBAR-ARROW-COLOR: #006699; SCROLLBAR-TRACK-COLOR: #F2F3FB;
+	SCROLLBAR-DARKSHADOW-COLOR: #F2F3FB;
+}
+
+TR.H {	BACKGROUND-COLOR: #E3EFFF}white {  font-family: "宋体"; font-size: 12px; color: #FFFFCC}
+TR.B {	BACKGROUND-COLOR: #F1F7FF}white {  font-family: "宋体"; font-size: 12px; color: #FFFFCC}
+TR.T {	BACKGROUND-COLOR: #ABC8EC}white {  font-family: "宋体"; font-size: 12px; color: #163A54}
+
+TD{font-family: "宋体"; font-size: 12px;border-color_:#008080;height:20;
+border-left:medium none; border-right_: 1px solid; 
+border-top:medium none; border-bottom_:1px solid; 
+padding-left:3px;padding-right:3px;
+}
+
+TD.noborder{
+border-left:  medium none; border-top:medium none;
+border-right: medium none; border-bottom:medium none;}
+
+TD.no-top{border-left:1px solid;}
+TD.only-bottom{border-right: medium none;}
+
+TD.AT{  font-family: "宋体"; font-size: 12px; color: blue;text-decoration: none}
+TD.AG{  font-family: "宋体"; font-size: 12px; color: green;text-decoration: none}
+TD.TTL{  font-family: "宋体"; font-size: 14px; color: blank;}
+
+Span {COLOR: blue; FONT-SIZE: 12px; TEXT-DECORATION: none;cursor: hand;}
+.a {TEXT-DECORATION: underline}
+
+a {font-size: 12px; text-decoration: none; font-family: 宋体; color: #660099}
+A:link {COLOR: #003399; FONT-SIZE: 12px}
+A:visited {COLOR: #003399; FONT-SIZE: 12px}
+A:active {COLOR: #990099; FONT-SIZE: 12px}
+a:hover {font-size: 12px;color: #5082E6;font-family: 宋体;text-decoration: none;}
+
+input.but20 {
+	font-family: "宋体";font-size: 12px;border: none;cursor: hand;	
+	background-image: url(../images/button/bgbtn2_0.gif);
+	height: 20px;width: 40px;}
+
+input.but30 {
+	font-family: "宋体";font-size: 12px;border: none;cursor: hand;	
+	background-image: url(../images/button/bgbtn3_0.gif);
+	height: 20px;width: 62px;}

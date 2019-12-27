@@ -1,0 +1,6 @@
+E:\6web\jisuanjituxingxue\jisuanjituxingxue\bin\jisuanjituxingxue.dll.config
+E:\6web\jisuanjituxingxue\jisuanjituxingxue\bin\jisuanjituxingxue.dll
+E:\6web\jisuanjituxingxue\jisuanjituxingxue\bin\jisuanjituxingxue.pdb
+E:\6web\jisuanjituxingxue\jisuanjituxingxue\obj\Debug\jisuanjituxingxue.csprojResolveAssemblyReference.cache
+E:\6web\jisuanjituxingxue\jisuanjituxingxue\obj\Debug\jisuanjituxingxue.dll
+E:\6web\jisuanjituxingxue\jisuanjituxingxue\obj\Debug\jisuanjituxingxue.pdb

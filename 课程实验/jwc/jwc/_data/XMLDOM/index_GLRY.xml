@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="gb2312"?>
+<root>
+  <GLRY id="632711822194720816">
+    <RoleName>教务处管理人员</RoleName>
+    <UsrName>常新华</UsrName>
+    <DeptName>外国语言文学学院</DeptName>
+    <HeadName>
+    </HeadName>
+    <OfficePhone>
+    </OfficePhone>
+    <IdKey>SYS0001969023</IdKey>
+  </GLRY>
+  <GLRY id="632711822218955664">
+    <RoleName>教务处管理人员</RoleName>
+    <UsrName>青果4</UsrName>
+    <DeptName>研究生院</DeptName>
+    <HeadName>
+    </HeadName>
+    <OfficePhone>
+    </OfficePhone>
+    <IdKey>SYS0000004008</IdKey>
+  </GLRY>
+</root>

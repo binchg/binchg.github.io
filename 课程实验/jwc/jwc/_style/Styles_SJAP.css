@@ -1,0 +1,70 @@
+body {  font-size: 12px; font-family: "宋体"; background-color: #F1F7FD;FONT-SIZE:12px;
+	COLOR:#040530}
+
+a {font-size: 12px; text-decoration: none; font-family: 宋体; color: #660099}
+A:link {COLOR: #003399; FONT-SIZE: 12px}
+A:visited {COLOR: #003399; FONT-SIZE: 12px}
+A:active {COLOR: #990099; FONT-SIZE: 12px}
+a:hover {font-size: 12px;color: #5082E6;font-family: 宋体;text-decoration: none;}
+
+hr {  color: #008888}
+h3 {  color: #008888; margin-top: 2px; margin-right: 2px; margin-bottom: 2px; margin-left: 2px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; text-align: center}
+
+TR.T {	BACKGROUND-COLOR: #ABC8EC}white {  font-family: "宋体"; font-size: 12px; color: #CC3300}
+
+TD{font-family: "宋体"; font-size: 12px;}
+
+TD.border{font-family: "宋体"; font-size: 12px;border-color:#008888;
+border-left:0px solid; border-right: 1px solid; 
+border-top :0px solid; border-bottom:1px solid;
+}
+
+TD.noborder{
+border-left:  medium none; border-top:medium none;
+border-right: medium none; border-bottom:medium none;}
+
+TD.no-top{border-left:1px solid;}
+TD.only-bottom{border-right: medium none;}
+
+TD.TT{  font-family: "宋体"; font-size: 12px; color: #003399;text-decoration: underline}
+
+input.button {
+	font-family: "宋体";
+	font-size: 12px;
+	background-image: url(../images/button/bgbtn2_0.gif);
+	border: none;
+	height: 20px;
+	width: 40px;
+	cursor: hand;
+}
+input.but3{
+	font-family: "宋体";
+	font-size: 12px;
+	background-image: url(../images/button/bgbtn3_0.gif);
+	border: none;
+	height: 22px;
+	width: 62px;
+	cursor: hand;
+}
+
+input.but20 {
+	font-family: "宋体";font-size: 12px;border: none;cursor: hand;	
+	background-image: url(../images/button/bgbtn2_0.gif);
+	height: 20px;width: 40px;}
+.but21 {
+	font-family: "宋体";font-size: 12px;border: none;cursor: hand;	
+	background-image: url(../images/button/bgbtn2_1.gif);
+	height: 20px;width: 40px;}
+
+input.but40 {
+	font-family: "宋体";font-size: 12px;border: none;cursor: hand;	
+	background-image: url(../images/button/bgbtn4_0.gif);
+	height: 20px;width: 59px;}
+.but41 {
+	font-family: "宋体";font-size: 12px;border: none;cursor: hand;	
+	background-image: url(../images/button/bgbtn4_1.gif);
+	height: 20px;width: 59px;}
+
+
+Span {COLOR: blue; FONT-SIZE: 12px; TEXT-DECORATION: none}
+.a {TEXT-DECORATION: underline}

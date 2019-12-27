@@ -1,0 +1,7 @@
+E:\6web\cd07test\test\test\bin\test.dll.config
+E:\6web\cd07test\test\test\bin\test.dll
+E:\6web\cd07test\test\test\bin\test.pdb
+E:\6web\cd07test\test\test\bin\MySql.Data.dll
+E:\6web\cd07test\test\test\obj\Debug\test.csprojResolveAssemblyReference.cache
+E:\6web\cd07test\test\test\obj\Debug\test.dll
+E:\6web\cd07test\test\test\obj\Debug\test.pdb

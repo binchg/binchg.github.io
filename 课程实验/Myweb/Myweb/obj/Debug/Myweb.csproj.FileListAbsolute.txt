@@ -1,0 +1,6 @@
+E:\6web\Myweb\Myweb\bin\Myweb.dll.config
+E:\6web\Myweb\Myweb\bin\Myweb.dll
+E:\6web\Myweb\Myweb\bin\Myweb.pdb
+E:\6web\Myweb\Myweb\obj\Debug\Myweb.csprojResolveAssemblyReference.cache
+E:\6web\Myweb\Myweb\obj\Debug\Myweb.dll
+E:\6web\Myweb\Myweb\obj\Debug\Myweb.pdb

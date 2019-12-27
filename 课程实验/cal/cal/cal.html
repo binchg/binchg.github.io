@@ -1,0 +1,142 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <base href="<%=basePath%>">
+    <title>计算器</title>
+    <meta charset="utf-8">
+    <link href="cal.css" rel="stylesheet" />
+</head>
+<body>
+        <div id="cac">
+            <h2>陈金彬的计算器</h2>
+            <div class="c_show">
+                <h2>输入</h2>
+                <input type="text" class="s_text" onfocus="this.blur();" value="0" id="show">
+                <h2>输出</h2>
+                <input type="text" class="s_text" onfocus="this.blur();" value="0" id="result">
+                <h2>寄存</h2>
+                <input type="text" class="s_text" onfocus="this.blur();" value="0" id="memory">
+            </div>
+            <div class="c_key">
+                <ul>
+                    <li class="c_memory" onclick="memory('MC')">MC</li>
+                    <li class="c_memory" onclick="memory('MR')">MR</li>
+                    <li class="c_memory" onclick="memory('MS')">MS</li>
+                    <li class="c_memory" onclick="memory('M+')">M+</li>
+                    <li class="c_memory" onclick="memory('M-')">M-</li>
+
+                    <li class="c_tool" onclick="tools('sin(','g')">sin</li>
+                    <li class="c_tool" onclick="tools('cos(','g')">cos</li>
+                    <li class="c_tool" onclick="tools('tan(','g')">tan</li>
+                    <li class="c_tool" onclick="tools('(','g')">(</li>
+                    <li class="c_tool" onclick="tools(')','g')">)</li>
+
+                    <li onclick="command(7);">7</li>
+                    <li onclick="command(8);">8</li>
+                    <li onclick="command(9);">9</li>
+                    <li class="c_tool" onclick="del('j')">←</li>
+                    <li class="c_tool" onclick="clearzero('j')">c</li>
+
+                    <li onclick="command(4);">4</li>
+                    <li onclick="command(5);">5</li>
+                    <li onclick="command(6);">6</li>
+                    <li class="c_tool" onclick="tools('*','g')">×</li>
+                    <li class="c_tool" onclick="tools('/','g')">÷</li>
+
+                    <li onclick="command(1);">1</li>
+                    <li onclick="command(2);">2</li>
+                    <li onclick="command(3);">3</li>
+                    <li class="c_tool" onclick="tools('+','g');">+</li>
+                    <li class="c_tool" onclick="tools('-','g');">-</li>
+
+                    <li onclick="command(0);">0</li>
+                    <li onclick="command(0); command(0);">00</li>
+                    <li onclick="command('.')">.</li>
+                    <li class="c_tool" onclick="tools('%','g');">%</li>
+                    <li class="c_result" onclick="equal('j');">=</li>
+                </ul>
+            </div>
+        </div>
+    
+    <script type="text/javascript">
+        //获取一下id
+        var resultDom = document.getElementById("result");
+        var showDom = document.getElementById("show");
+        var mDom = document.getElementById("memory");
+        //点击计算器执行函数
+        function command(num) {
+            var str = showDom.value;
+            str = (str == "0" ? "" : str);
+            str += num;
+            showDom.value = str;
+            var str = resultDom.value;
+            str = (str == "0" ? "" : str);
+            str += num;
+            resultDom.value = str;
+        }
+        function tools(p, m) {
+            //if (operate) {
+                var num = showDom.value;
+                num = (num == "0" ? "" : num);
+                showDom.value = num + p;
+                var num = resultDom.value;
+                num = (num == "0" ? "" : num);
+                if (p == 'sin(') {p = 'Math.sin(';}
+                if (p == 'cos(') {p = 'Math.cos(';}
+                if (p == 'tan(') { p = 'Math.tan('; }
+                resultDom.value = num + p;
+                //operate = false;
+            //}
+        }
+        function equal(m) {
+            var result = resultDom.value;
+            var r = eval(result);
+            resultDom.value = r;
+        }
+        function clearzero() {
+            showDom.value = 0;
+            resultDom.value = 0;
+        }
+        function del(m) {
+            var str = showDom.value;
+            str = str.substring(0, str.length - 1);
+            str = (str == "" ? 0 : str);
+            showDom.value = str;
+            var str = resultDom.value;
+            str = str.substring(0, str.length - 1);
+            str = (str == "" ? 0 : str);
+            resultDom.value = str;
+        }
+        function memory(m) {
+            if (m == 'MC') {
+                str = '0';
+                mDom.value = str;
+            }
+            else if (m == 'MR') {
+                str = mDom.value;
+                resultDom.value = str;
+                showDom.value = str;
+
+            }
+            else if (m == 'MS') {
+                str = resultDom.value;
+                mDom.value = str;
+            }
+            else if (m == 'M+') {
+                str = resultDom.value;
+                mstr = mDom.value;
+                str = str + '+' + mstr;
+                str = eval(str)
+                mDom.value = str;
+            }
+            else if (m == 'M-') {
+                str = resultDom.value;
+                mstr = mDom.value;
+                str = str + '-' + mstr;
+                str = eval(str)
+                mDom.value = str;
+            }
+        }
+    </script>   
+</body>
+</html>

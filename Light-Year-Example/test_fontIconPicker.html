@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+<title>图标选择插件fontIconPicker - 光年(Light Year Admin)后台管理系统模板</title>
+<link rel="icon" href="favicon.ico" type="image/ico">
+<meta name="keywords" content="LightYear,光年,后台模板,后台管理系统,光年HTML模板">
+<meta name="description" content="LightYear是一个基于Bootstrap v3.3.7的后台管理系统的HTML模板。">
+<meta name="author" content="yinqi">
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/materialdesignicons.min.css" rel="stylesheet">
+<link href="js/fontIconPicker/css/jquery.fonticonpicker.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="js/fontIconPicker/themes/bootstrap-theme/jquery.fonticonpicker.bootstrap.min.css" />
+<link href="css/style.min.css" rel="stylesheet">
+<style>
+
+</style>
+</head>
+  
+<body>
+<div class="container-fluid">
+  
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header"><h4>图标选择插件 fontIconPicker</h4></div>
+        <div class="card-body">
+          
+          <p>选择后可直接获取选择后的值。例如：<code>$("#icon-example").val();</code></p>
+          <input type="text" id="icon-example" name="icon-example" />
+          
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  
+</div>
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/fontIconPicker/jquery.fonticonpicker.min.js"></script>
+<script type="text/javascript">
+jQuery(document).ready(function($) {
+    var font_element = $('#icon-example').fontIconPicker({
+        theme: 'fip-bootstrap'
+    });
+    
+    $.ajax({
+        url: './js/fontIconPicker/fontjson/materialdesignicons.json',
+        type: 'GET',
+        dataType: 'json'
+    }).done(function(response) {
+ 
+        var fontello_json_icons = [];
+ 
+        $.each(response.glyphs, function(i, v) {
+            fontello_json_icons.push( v.css );
+        });
+ 
+        font_element.setIcons(fontello_json_icons);
+    }).fail(function() {
+        console.error('字体图标配置加载失败');
+    });
+ 
+});
+</script>
+</body>
+</html>

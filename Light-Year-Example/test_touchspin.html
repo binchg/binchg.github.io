@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+<title>输入微调器组件jquery.bootstrap-touchspin - 光年(Light Year Admin)后台管理系统模板</title>
+<link rel="icon" href="favicon.ico" type="image/ico">
+<meta name="keywords" content="LightYear,光年,后台模板,后台管理系统,光年HTML模板">
+<meta name="description" content="LightYear是一个基于Bootstrap v3.3.7的后台管理系统的HTML模板。">
+<meta name="author" content="yinqi">
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/materialdesignicons.min.css" rel="stylesheet">
+<link href="js/bootstrap-touchspin/jquery.bootstrap-touchspin.css" rel="stylesheet">
+<link href="css/style.min.css" rel="stylesheet">
+<style>
+
+</style>
+</head>
+  
+<body>
+<div class="container-fluid">
+  
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header"><h4>输入微调器组件 jquery.bootstrap-touchspin</h4></div>
+        <div class="card-body">
+          
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="example-attr">使用data-属性配置示例</label>
+                <input type="text" id="example-attr" name="example-attr" class="form-control" value="55"   
+                data-bts-min="0"
+                data-bts-max="100"
+                data-bts-init-val=""
+                data-bts-step="1"
+                data-bts-decimal="0"
+                data-bts-step-interval="100"
+                data-bts-force-step-divisibility="round"
+                data-bts-step-interval-delay="500"
+                data-bts-prefix=""
+                data-bts-postfix=""
+                data-bts-prefix-extra-class=""
+                data-bts-postfix-extra-class=""
+                data-bts-booster="true"
+                data-bts-boostat="10"
+                data-bts-max-boosted-step="false"
+                data-bts-mousewheel="true"
+                data-bts-button-down-class="btn btn-secondary"
+                data-bts-button-up-class="btn btn-secondary"/>
+              </div>
+              <div class="form-group">
+                <label for="example-postfix">带后缀的示例</label>
+                <input type="text" id="example-postfix" class="form-control" value="55" name="example-postfix" />
+              </div>
+              <div class="form-group">
+                <label for="example-prefix">带前缀的示例</label>
+                <input type="text" id="example-prefix" class="form-control" value="0" name="example-prefix" />
+              </div>
+              <div class="form-group">
+                <label for="example-empty">空值的初始化</label>
+                <input type="text" id="example-empty" class="form-control" value="" name="example-empty" />
+              </div>
+              <div class="form-group">
+                <label for="example-button-postfix">按钮后缀</label>
+                <input type="text" id="example-button-postfix" class="form-control" name="example-button-postfix" />
+              </div>
+              <div class="form-group">
+                <label for="example-button-class">更改按钮类</label>
+                <input type="text" id="example-button-class" class="form-control" name="example-button-class" />
+              </div>
+              <div class="form-group">
+                <label for="example-boundaries">禁用边界</label>
+                <input type="text" id="example-boundaries" class="form-control" name="example-boundaries" value="1234567890" />
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="example-vertical">按钮垂直对齐</label>
+                <input type="text" id="example-vertical" class="form-control" value="" name="example-vertical" />
+              </div>
+              <div class="form-group">
+                <label for="example-icon-vertical">带有自定义图标的垂直按钮</label>
+                <input type="text" id="example-icon-vertical" class="form-control" value="" name="example-icon-vertical" />
+              </div>
+              <div class="form-group">
+                <label for="example-callback">使用numeraljs格式化数字的回调示例（可以使用任何其他方法）</label>
+                <input type="text" id="example-callback" name="example-callback" class="form-control"
+                  value="10000.00"
+                  data-bts-min="-1000000"
+                  data-bts-max="1000000"
+                  data-bts-step=".01"
+                  data-bts-decimals="2"  />
+              </div>
+              <div class="form-group">
+                <label for="example-initval">初始化数值（输入框可用<code>input-sm</code>、<code>input-lg</code>指定大小）</label>
+                <input type="text" id="example-initval" class="form-control" name="example-initval" />
+              </div>
+              <div class="form-group">
+                <label for="example-button-group">按钮组</label>
+                <div class="input-group">
+                  <input type="text" id="example-button-group" class="form-control" name="example-button-group" value="50" />
+          
+                  <div class="input-group-btn">
+                    <button type="button" class="btn btn-default">Action</button>
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                      <span class="caret"></span>
+                      <span class="sr-only">Toggle Dropdown</span>
+                    </button>
+                    <ul class="dropdown-menu pull-right" role="menu">
+                      <li><a href="#">Action</a></li>
+                      <li><a href="#">Another action</a></li>
+                      <li><a href="#">Something else here</a></li>
+                      <li class="divider"></li>
+                      <li><a href="#">Separated link</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="example-replaced">空白/非数字替换</label>
+                <input type="text" id="example-replaced" class="form-control" name="example-replaced" value="50" />
+              </div>
+              <div class="form-group">
+                <label for="example-event">事件示例</label>
+                <input type="text" id="example-event" class="form-control" name="example-event" value="50" />
+              </div>
+            </div>
+            <div class="col-md-12">
+              <pre id="pretextarea" style="height:200px;overflow:auto;"></pre>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  
+</div>
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/bootstrap-touchspin/jquery.bootstrap-touchspin.min.js"></script>
+<script src="https://cdn.bootcss.com/numeral.js/2.0.6/numeral.min.js"></script><!--有个示例需要用到的，这里用的网上的js，有需要的可自行下载-->
+<script src="https://cdn.bootcss.com/numeral.js/2.0.6/locales/chs.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+    // 使用data-属性配置示例
+    $("#example-attr").TouchSpin({});
+    // 后缀的示例
+    $("#example-postfix").TouchSpin({
+        min: 0,
+        max: 100,
+        step: 0.1,
+        decimals: 2,
+        boostat: 5,
+        maxboostedstep: 10,
+        postfix: '%'
+    });
+    // 前缀的示例
+    $("#example-prefix").TouchSpin({
+        min: -1000000000,
+        max: 1000000000,
+        stepinterval: 50,
+        maxboostedstep: 10000000,
+        prefix: '¥'
+    });
+    // 按钮垂直对齐
+    $("#example-vertical").TouchSpin({
+        verticalbuttons: true,
+    });
+    // 带有自定义图标的垂直按钮
+    $("#example-icon-vertical").TouchSpin({
+        verticalbuttons: true,
+        verticalup: '<i class="mdi mdi-chevron-up"></i>',
+        verticaldown: '<i class="mdi mdi-chevron-down"></i>'
+    });
+    // 使用numeraljs格式化数字的回调示例
+    numeral.locale('chs');
+    $("#example-callback").TouchSpin({
+        callback_before_calculation: function (v) {
+            return numeral(v).value();
+        },
+        callback_after_calculation: function (v) {
+            return numeral(v).format("$0,0.00");
+        }
+    });
+    // 空值的初始化
+    $("#example-empty").TouchSpin();
+    // 初始化数值
+    $("#example-initval").TouchSpin({
+        initval: 40
+    });
+    // 按钮后缀
+    $("#example-button-postfix").TouchSpin({
+        postfix: "一个按钮",
+        postfix_extraclass: "btn btn-info"
+    });
+    // 按钮组
+    $("#example-button-group").TouchSpin({
+        prefix: "pre",
+        postfix: "post"
+    });
+    // 更改按钮类
+    $("#example-button-class").TouchSpin({
+        buttondown_class: "btn btn-link",
+        buttonup_class: "btn btn-link"
+    });
+    // 空白/非数字替换，输入空或者非数字时会被替换成10
+    $("#example-replaced").TouchSpin({
+        replacementval: 10
+    });
+    // 禁用边界
+    $("#example-boundaries").TouchSpin({
+        min: null,
+        max: null
+    });
+    // 事件示例
+    var i = $("#example-event"),
+        demoarea = $("#pretextarea"),
+        text = "";
+
+    function writeLine(line) {
+        text += line + "\n";
+        demoarea.text(text);
+        demoarea.scrollTop(
+            demoarea[0].scrollHeight - demoarea.height()
+        );
+    }
+
+    i.TouchSpin({});
+    i.on("touchspin.on.startspin", function () {
+        writeLine("touchspin.on.startspin");
+    });
+    i.on("touchspin.on.startupspin", function () {
+        writeLine("touchspin.on.startupspin");
+    });
+    i.on("touchspin.on.startdownspin", function () {
+        writeLine("touchspin.on.startdownspin");
+    });
+    i.on("touchspin.on.stopspin", function () {
+        writeLine("touchspin.on.stopspin");
+    });
+    i.on("touchspin.on.stopupspin", function () {
+        writeLine("touchspin.on.stopupspin");
+    });
+    i.on("touchspin.on.stopdownspin", function () {
+        writeLine("touchspin.on.stopdownspin");
+    });
+    i.on("touchspin.on.min", function () {
+        writeLine("touchspin.on.min");
+    });
+    i.on("touchspin.on.max", function () {
+        writeLine("touchspin.on.max");
+    });
+});
+</script>
+</body>
+</html>

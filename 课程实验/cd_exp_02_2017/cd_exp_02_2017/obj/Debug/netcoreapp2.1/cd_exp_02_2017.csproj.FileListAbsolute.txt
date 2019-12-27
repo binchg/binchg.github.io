@@ -1,0 +1,14 @@
+E:\6web\cd_exp_02_2017\cd_exp_02_2017\bin\Debug\netcoreapp2.1\cd_exp_02_2017.deps.json
+E:\6web\cd_exp_02_2017\cd_exp_02_2017\bin\Debug\netcoreapp2.1\cd_exp_02_2017.runtimeconfig.json
+E:\6web\cd_exp_02_2017\cd_exp_02_2017\bin\Debug\netcoreapp2.1\cd_exp_02_2017.runtimeconfig.dev.json
+E:\6web\cd_exp_02_2017\cd_exp_02_2017\bin\Debug\netcoreapp2.1\cd_exp_02_2017.dll
+E:\6web\cd_exp_02_2017\cd_exp_02_2017\bin\Debug\netcoreapp2.1\cd_exp_02_2017.pdb
+E:\6web\cd_exp_02_2017\cd_exp_02_2017\obj\Debug\netcoreapp2.1\cd_exp_02_2017.csprojAssemblyReference.cache
+E:\6web\cd_exp_02_2017\cd_exp_02_2017\obj\Debug\netcoreapp2.1\cd_exp_02_2017.csproj.CoreCompileInputs.cache
+E:\6web\cd_exp_02_2017\cd_exp_02_2017\obj\Debug\netcoreapp2.1\cd_exp_02_2017.RazorAssemblyInfo.cache
+E:\6web\cd_exp_02_2017\cd_exp_02_2017\obj\Debug\netcoreapp2.1\cd_exp_02_2017.RazorAssemblyInfo.cs
+E:\6web\cd_exp_02_2017\cd_exp_02_2017\obj\Debug\netcoreapp2.1\cd_exp_02_2017.AssemblyInfoInputs.cache
+E:\6web\cd_exp_02_2017\cd_exp_02_2017\obj\Debug\netcoreapp2.1\cd_exp_02_2017.AssemblyInfo.cs
+E:\6web\cd_exp_02_2017\cd_exp_02_2017\obj\Debug\netcoreapp2.1\cd_exp_02_2017.RazorTargetAssemblyInfo.cache
+E:\6web\cd_exp_02_2017\cd_exp_02_2017\obj\Debug\netcoreapp2.1\cd_exp_02_2017.dll
+E:\6web\cd_exp_02_2017\cd_exp_02_2017\obj\Debug\netcoreapp2.1\cd_exp_02_2017.pdb

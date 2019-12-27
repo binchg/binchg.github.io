@@ -1,0 +1,85 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>目录树</title>
+<link href="../_style/default/styles_help.css" rel="stylesheet" type="text/css">
+<script language="JavaScript">
+<!--
+function showLay(divId){
+	var objDiv = eval(divId);
+	if (objDiv.style.display=="none"){
+		eval("img"+divId+".src='image/-1.gif'");
+		objDiv.style.display="";
+	}else{
+		eval("img"+divId+".src='image/+1.gif'");
+		objDiv.style.display="none";
+	}
+}
+
+function ToLink(Tcase)
+{		
+	var whichEl;
+			
+	if(Tcase==0){
+        parent.left.document.location.href='tree_left.htm';
+	}else{
+	parent.right.document.location.href=Tcase.value;
+	}
+}
+// -->
+</script>
+<style type="text/css">
+<!--
+.style1 {font-size: 12px}
+-->
+</style>
+</head>
+
+<body leftmargin="6" topmargin="16" marginwidth="0" marginheight="0" bgcolor="#E8E8E8" onselectstart=window.event.returnValue=false 
+oncontextmenu=window.event.returnValue=false 
+ondragstart=window.event.returnValue=false 
+onsource=window.event.returnValue=false>	   
+    <span class="style1" onclick=showLay('Layer1')>    
+    <img src="image/-1.gif" width="31" id=imgLayer1>
+	<span id=a value=GLFW/admin.htm title='' onclick=ToLink(this)>
+	<a href="#" class=tree>为管理人员提供的服务</a></span><br>
+</span> 
+<div id="Layer1" style="display:none_; font-size: 12px;"> 
+<img src="image/tree.gif" width="55" height="18"> 
+<span id=a value=GLFW/1501.htm title='' onclick=ToLink(this)>
+<a href="#" class=tree> 教学计划</a></span><br>
+<img src="image/tree.gif" width="55" height="18"> 
+<span id=a value=GLFW/1502.htm title='' onclick=ToLink(this)>
+<a href="#" class=tree> 教学资源</a></span><br>	 
+<img src="image/tree.gif" width="55" height="18"> 
+<span id=a value=GLFW/1503.htm title='' onclick=ToLink(this)>
+<a href="#" class=tree> 课表编排</a></span><br>	
+<img src="image/tree.gif" width="55" height="18"> 
+<span id=a value=GLFW/1504.htm title='' onclick=ToLink(this)>
+<a href="#" class=tree> 学生学籍</a></span><br>	
+<img src="image/tree.gif" width="55" height="18"> 
+<span id=a value=GLFW/1505.htm title='' onclick=ToLink(this)>
+<a href="#" class=tree> 学生成绩</a></span><br>	
+<img src="image/tree.gif" width="55" height="18"> 
+<span id=a value=GLFW/1506.htm title='' onclick=ToLink(this)>
+<a href="#" class=tree> 考试事务</a></span><br>	
+<img src="image/tree.gif" width="55" height="18"> 
+<span id=a value=GLFW/1507.htm title='' onclick=ToLink(this)>
+<a href="#" class=tree> 实践教学</a></span><br>	
+<img src="image/tree.gif" width="55" height="18"> 
+<span id=a value=GLFW/1508.htm title='' onclick=ToLink(this)>
+<a href="#" class=tree> 教学评价</a></span><br>	
+<img src="image/tree.gif" width="55" height="18"> 
+<span id=a value=GLFW/1509.htm title='' onclick=ToLink(this)>
+<a href="#" class=tree> 教材管理</a></span><br>	
+<img src="image/tree.gif" width="55" height="18"> 
+<span id=a value=GLFW/1510.htm title='' onclick=ToLink(this)>
+<a href="#" class=tree> 论坛</a></span><br>	
+<img src="image/tree.gif" width="55" height="18"> 
+<span id=a value=GLFW/1511.htm title='' onclick=ToLink(this)>
+<a href="#" class=tree> 其他</a></span><br>	
+</div>
+</div>
+</body>
+</html>

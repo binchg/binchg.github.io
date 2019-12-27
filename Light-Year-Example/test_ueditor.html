@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+<title>富文本编辑器ueditor - 光年(Light Year Admin)后台管理系统模板</title>
+<link rel="icon" href="favicon.ico" type="image/ico">
+<meta name="keywords" content="LightYear,光年,后台模板,后台管理系统,光年HTML模板">
+<meta name="description" content="LightYear是一个基于Bootstrap v3.3.7的后台管理系统的HTML模板。">
+<meta name="author" content="yinqi">
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/materialdesignicons.min.css" rel="stylesheet">
+<link href="css/style.min.css" rel="stylesheet">
+<style>
+
+</style>
+</head>
+  
+<body>
+<div class="container-fluid">
+  
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header"><h4>富文本编辑器 ueditor</h4></div>
+        <div class="card-body">
+          
+          <p>直接打开能提示“后台配置项返回格式出错，上传功能将不能正常使用！”，因为ueditor.config.js配置了一个自定义上传的地址，请应用服务器中浏览。</p>
+          <form action="#!" method="post" id="example-from">
+            <script id="container" name="content" type="text/plain">这里写你的初始化内容</script>
+          </form>
+          
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  
+</div>
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<!-- 配置文件 -->
+<script type="text/javascript" src="js/ueditor/ueditor.config.js"></script>
+<!-- 编辑器源码文件 -->
+<script type="text/javascript" src="js/ueditor/ueditor.all.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+    var ue = UE.getEditor('container');
+});
+</script>
+</body>
+</html>

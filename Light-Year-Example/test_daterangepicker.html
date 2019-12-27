@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+<title>时间段选择器Date Range Picker - 光年(Light Year Admin)后台管理系统模板</title>
+<link rel="icon" href="favicon.ico" type="image/ico">
+<meta name="keywords" content="LightYear,光年,后台模板,后台管理系统,光年HTML模板">
+<meta name="description" content="LightYear是一个基于Bootstrap v3.3.7的后台管理系统的HTML模板。">
+<meta name="author" content="yinqi">
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/materialdesignicons.min.css" rel="stylesheet">
+<link href="js/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
+<link href="css/style.min.css" rel="stylesheet">
+<style>
+
+</style>
+</head>
+  
+<body>
+<div class="container-fluid">
+  
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header"><h4>时间段选择器Date Range Picker</h4></div>
+        <div class="card-body">
+          
+          <div class="form-group">
+            <label for="dates">默认使用</label>
+            <input type="text" id="dates" class="form-control" />
+          </div>
+          <div class="form-group">
+            <label>带回调的简单日期范围选择器</label>
+            <p class="text-muted">可到控制台查看回调的输出情况。</p>
+            <input type="text" name="daterange" class="form-control" />
+          </div>
+          <div class="form-group">
+            <label>日期范围选择器与时间</label>
+            <input type="text" name="datetimes" class="form-control" />
+          </div>
+          <div class="form-group">
+            <label>单日期选择器</label>
+            <input type="text" name="birthday" class="form-control" />
+          </div>
+          <div class="form-group">
+            <label for="reportrange">预定义的日期范围</label>
+            <div class="input-group">
+              <input type="text" id="reportrange" class="form-control" value="" />
+              <span class="input-group-addon"><i class="mdi mdi-calendar"></i></span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>输入最初为空</label>
+            <input type="text" name="datefilter" class="form-control"  />
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  
+</div>
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/moment/moment.min.js"></script><!--这个文件在原模板的bootstrap-datetimepicker中有，这里将它挪出来了-->
+<script type="text/javascript" src="js/moment/locale/zh-cn.js"></script>
+<script type="text/javascript" src="js/bootstrap-daterangepicker/daterangepicker.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+    // 入门使用
+    $('#dates').daterangepicker({ 
+        startDate: moment(), 
+        endDate: moment().add(2, 'day')
+    });
+    
+    // 带回调的处理
+    $('input[name="daterange"]').daterangepicker({
+        opens: 'left'
+    }, function(start, end, label) {
+        console.log("您选择的时间段是：" + start.format('YYYY-MM-DD') + ' 至 ' + end.format('YYYY-MM-DD'));
+    });
+    
+    // 日期范围选择器与时间
+    $('input[name="datetimes"]').daterangepicker({
+        timePicker: true,
+        startDate: moment().startOf('hour'),
+        endDate: moment().startOf('hour').add(32, 'hour'),
+        locale: {
+            format: 'M/DD hh:mm A'
+        }
+    });
+    
+    // 单日期选择器
+    $('input[name="birthday"]').daterangepicker({
+        singleDatePicker: true,
+        showDropdowns: true,
+        minYear: 1901,
+        maxYear: parseInt(moment().format('YYYY'),10)
+    }, function(start, end, label) {
+        var years = moment().diff(start, 'years');
+        alert("您已经 " + years + " 岁了。");
+    });
+    
+    // 预定义的日期范围
+    var start = moment().subtract(29, 'days');
+    var end = moment();
+    
+    function cb(start, end) {
+        $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+    }
+    
+    $('#reportrange').daterangepicker({
+        startDate: start,
+        endDate: end,
+        ranges: {
+           '今天': [moment(), moment()],
+           '昨天': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+           '七天前': [moment().subtract(6, 'days'), moment()],
+           '30天前': [moment().subtract(29, 'days'), moment()],
+           '当前月': [moment().startOf('month'), moment().endOf('month')],
+           '上个月': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+        }
+    }, cb);
+    
+    cb(start, end);
+    
+    // 输入最初为空
+    $('input[name="datefilter"]').daterangepicker({
+        autoUpdateInput: false,
+        locale: {
+            cancelLabel: '清空'
+        }
+    });
+
+    $('input[name="datefilter"]').on('apply.daterangepicker', function(ev, picker) {
+        $(this).val(picker.startDate.format('YYYY-MM-DD') + ' - ' + picker.endDate.format('YYYY-MM-DD'));
+    });
+
+    $('input[name="datefilter"]').on('cancel.daterangepicker', function(ev, picker) {
+        $(this).val('');
+    });
+
+});
+</script>
+</body>
+</html>

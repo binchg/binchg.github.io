@@ -1,0 +1,35 @@
+.stbtm {
+	BACKGROUND-COLOR: #cecbde; BORDER-BOTTOM: #665b8e 1px solid; BORDER-LEFT: #ffffff 1px solid; BORDER-RIGHT: #665b8e 1px solid; BORDER-TOP: #ffffff 1px solid; COLOR: #666699; FONT-SIZE: 9pt; HEIGHT: 20px; WIDTH: 100px
+}
+.stedit {
+	BORDER-BOTTOM: #4a3163 1px solid; BORDER-LEFT: #4a3163 1px solid; BORDER-RIGHT: #4a3163 1px solid; BORDER-TOP: #4a3163 1px solid; FONT-SIZE: 9pt
+}
+.INPUT {
+	COLOR: #000000; FONT-SIZE: 9pt; TEXT-DECORATION: none
+}
+.SELECT {
+	COLOR: #000000; FONT-SIZE: 9pt; TEXT-DECORATION: none
+}
+
+.mail {
+	FONT-FAMILY: "verdana"; FONT-SIZE: 9px; TEXT-DECORATION: none; font-color: #000000
+}
+
+A{TEXT-DECORATION: none}
+A:link
+ {COLOR: "blue"; FONT-FAMILY: ËÎÌו}
+A:visited 
+{COLOR: "blue"; FONT-FAMILY: ËÎÌו}
+A:active
+ {COLOR: "red"; FONT-FAMILY: ËÎÌו}
+A:hover 
+{COLOR: #008080; TEXT-DECORATION: underline}
+
+BODY
+ {FONT-SIZE: 11pt}
+.TD {
+	COLOR: #000000; FONT-SIZE: 9pt; LINE-HEIGHT: 12pt; TEXT-DECORATION: none
+}
+.HEAD {
+	COLOR: #ffff00; FONT-SIZE: 36pt
+}

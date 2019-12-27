@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="gb2312"?>
+<?xml-stylesheet type='text/xsl' href='indexRule.xsl'?>
+<root>
+  <TheTitle>
+    <title>北京师范大学管理规定</title>
+  </TheTitle>
+  <RULES>
+    <RULE id="1">
+      <href>CJ_GLGD.xml</href>
+      <name>成绩管理规定</name>
+      <isPub>1</isPub>
+    </RULE>
+    <RULE id="2">
+      <href>KP_GLGD.xml</href>
+      <name>考评管理规定</name>
+      <isPub>1</isPub>
+    </RULE>
+    <RULE id="3">
+      <href>KW_GLGD.xml</href>
+      <name>考试管理规定</name>
+      <isPub>1</isPub>
+    </RULE>
+    <RULE id="4">
+      <href>XJ_GLGD.xml</href>
+      <name>学籍管理规定</name>
+      <isPub>1</isPub>
+    </RULE>
+    <RULE id="5">
+      <href>XK_GLGD.xml</href>
+      <name>选课管理规定</name>
+      <isPub>1</isPub>
+    </RULE>
+  </RULES>
+</root>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+<title>输入长度判断插件Bootstrap MaxLength - 光年(Light Year Admin)后台管理系统模板</title>
+<link rel="icon" href="favicon.ico" type="image/ico">
+<meta name="keywords" content="LightYear,光年,后台模板,后台管理系统,光年HTML模板">
+<meta name="description" content="LightYear是一个基于Bootstrap v3.3.7的后台管理系统的HTML模板。">
+<meta name="author" content="yinqi">
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/materialdesignicons.min.css" rel="stylesheet">
+<link href="css/style.min.css" rel="stylesheet">
+<style>
+.bootstrap-maxlength {
+    padding-top: .2em;
+    line-height: 1.5;
+    border-radius: 0px;
+}
+</style>
+</head>
+  
+<body>
+<div class="container-fluid">
+  
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header"><h4>输入长度判断插件 Bootstrap MaxLength</h4></div>
+        <div class="card-body">
+          
+          <div class="form-group">
+            <label for="defaultconfig">默认</label>
+            <p class="text-muted">默认当剩余字符小于等于10时，提示将显示：</p>
+            <input type="text" class="form-control" maxlength="25" name="defaultconfig" id="defaultconfig">
+          </div>
+          <div class="form-group">
+            <label for="thresholdconfig">阈值</label>
+            <p class="text-muted">使用<code>threshold</code>选项表示还有多少字符可以开始显示指示。</p>
+            <input type="text" maxlength="25" name="thresholdconfig" class="form-control" id="thresholdconfig">
+          </div>
+          <div class="form-group">
+            <label for="placement">位置</label>
+            <p class="text-muted">您所需要做的就是用其中一个字符串指定<code>placement</code>选项。如果未指定，则将被定位到“底部”。</p>
+            <input type="text" class="form-control" maxlength="25" name="placement" id="placement">
+          </div>
+          <div class="form-group">
+            <label for="alloptions">始终显示</label>
+            <p class="text-muted mb-3 font-13">如果<code>alwaysShow</code>为true，则将忽略阈值，其余长度指示将始终在输入或获取焦点时显示。默认值：false。</p>
+            <input type="text" class="form-control" maxlength="25" name="alloptions" id="alloptions">
+          </div>
+          <div class="form-group">
+            <label for="mb-2">文本域</label>
+            <p class="textarea">Bootstrap maxlength 支持文本区域和输入。即使在旧的IE上。</p>
+            <textarea id="textarea" class="form-control" maxlength="225" rows="3" placeholder="此文本区域限制为225个字符。"></textarea>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  
+</div>
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/bootstrap-maxlength/bootstrap-maxlength.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+    // 默认使用
+    $("input#defaultconfig").maxlength({
+        warningClass: "label label-info",
+        limitReachedClass: "label label-warning"
+    });
+    // 设置阈值
+    $("input#thresholdconfig").maxlength({
+        threshold: 20,
+        warningClass: "label label-info",
+        limitReachedClass: "label label-warning"
+    });
+    // 设置提示显示的位置
+    $("input#placement").maxlength({
+        // 可使用的值有: bottom, left, top, right, bottom-right, top-right, top-left, bottom-left 和 centered-right。
+        // 你也可以使用 : bottom-right-inside, top-right-inside, top-left-inside and bottom-left-inside.
+        alwaysShow: true,
+        placement: "bottom-right-inside",
+        warningClass: "label label-info",
+        limitReachedClass: "label label-warning"
+    })
+    // 始终显示
+    $("input#alloptions").maxlength({
+        alwaysShow: true,
+        warningClass: "label label-success",
+        limitReachedClass: "label label-danger",
+        separator: " 个字符； ",
+        preText: "已输入 ",
+        postText: " 个可用字符。",
+        validate: !0
+    });
+    // 文本域使用
+    $("textarea#textarea").maxlength({
+        threshold: 255,
+        warningClass: "label label-info",
+        limitReachedClass: "label label-warning"
+    });
+});
+</script>
+</body>
+</html>

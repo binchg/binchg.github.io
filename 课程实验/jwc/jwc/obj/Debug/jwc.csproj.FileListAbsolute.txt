@@ -1,0 +1,6 @@
+E:\6web\jwc\jwc\bin\jwc.dll.config
+E:\6web\jwc\jwc\bin\jwc.dll
+E:\6web\jwc\jwc\bin\jwc.pdb
+E:\6web\jwc\jwc\obj\Debug\jwc.csprojResolveAssemblyReference.cache
+E:\6web\jwc\jwc\obj\Debug\jwc.dll
+E:\6web\jwc\jwc\obj\Debug\jwc.pdb

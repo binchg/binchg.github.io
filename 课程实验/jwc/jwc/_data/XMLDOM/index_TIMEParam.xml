@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="gb2312"?>
+<root>
+  <prams>
+    <nodal id="632999061032968750">
+      <timeSegment>1</timeSegment>
+      <nodeOrder>01</nodeOrder>
+      <timeStr>08:10-08:50</timeStr>
+      <remarkStr>
+      </remarkStr>
+    </nodal>
+    <nodal id="632999061272968750">
+      <timeSegment>2</timeSegment>
+      <nodeOrder>02</nodeOrder>
+      <timeStr>09:00-09:50</timeStr>
+      <remarkStr>
+      </remarkStr>
+    </nodal>
+    <nodal id="632999061580156250">
+      <timeSegment>2</timeSegment>
+      <nodeOrder>03</nodeOrder>
+      <timeStr>10:10-11:00</timeStr>
+      <remarkStr>
+      </remarkStr>
+    </nodal>
+    <nodal id="632999062216718750">
+      <timeSegment>3</timeSegment>
+      <nodeOrder>04</nodeOrder>
+      <timeStr>11:10-12:00</timeStr>
+      <remarkStr>
+      </remarkStr>
+    </nodal>
+    <nodal id="632999062682031250">
+      <timeSegment>4</timeSegment>
+      <nodeOrder>05</nodeOrder>
+      <timeStr>14:30-15:20</timeStr>
+      <remarkStr>
+      </remarkStr>
+    </nodal>
+  </prams>
+  <xnxq>20060</xnxq>
+</root>

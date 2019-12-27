@@ -1,0 +1,11 @@
+input{ border-style:solid; border-width:1px;}
+textarea{ border-style:solid; border-width:1px;}
+input.button {
+	font-family: "ËÎÌו";
+	font-size: 12px;
+	background-image: url(../images/button/bgbtn2_0.gif);
+	border: none;
+	height: 20px;
+	width: 40px;
+	cursor: hand;
+}

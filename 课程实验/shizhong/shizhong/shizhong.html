@@ -1,0 +1,265 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title> 模拟时钟 </title>
+    <style type="text/css">
+        * {
+            margin: 0px;/*外边距*/
+            padding: 0px;/*内边距*/
+        }
+        /*设置时钟的外框*/
+        .clock {
+            position: absolute;/*定位机制：绝对定位*/
+            top: 50%;
+            left: 50%;
+            width: 500px;
+            height: 500px;
+            margin-left: -250px;
+            margin-top: -250px;
+            padding: 6px;
+            border: 1px solid #ccc;/*宽度 风格实线 颜色*/
+            -webkit-border-radius: 253px;
+            -moz-border-radius: 253px;
+            -o-border-radius: 253px;
+            -ms-border-radius: 253px;
+            border-radius: 250px;/*圆角大小画圆*/
+        }
+        /*设置时钟的分格针，分针格是通过js创建*/
+        .minutes {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            height: 100%;
+            margin-left: -50%;
+            margin-top: -50%;
+            -webkit-border-radius: 250px;
+            -moz-border-radius: 250px;
+            -o-border-radius: 250px;
+            -ms-border-radius: 250px;
+            border-radius: 250px;
+        }
+        /*设置时钟的时针格，时针格是通过js创建*/
+        .hours {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 494px;
+            height: 494px;
+            margin-left: -247px;  
+            margin-top: -247px;
+            background-color: #FFF;
+            -webkit-border-radius: 247px;
+            -moz-border-radius: 247px;
+            -o-border-radius: 247px;
+            -ms-border-radius: 247px;
+            border-radius: 247px;
+        }
+        /*设置表盘*/
+        .hms {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 480px;
+            height: 480px;
+            margin-left: -240px;
+            margin-top: -240px;
+            background-color: #FFF;
+            -webkit-border-radius: 240px;
+            -moz-border-radius: 240px;
+            -o-border-radius: 240px;
+            -ms-border-radius: 240px;
+            border-radius: 240px;
+        }
+        /*设置时钟的时针样式*/
+        .h {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-left: -3px;
+            margin-top: -155px;
+            width: 6px;
+            height: 165px;
+            background-color: #333;
+            z-index: 10; /*堆叠顺序*/
+            -webkit-transform-origin: center 155px;
+            -moz-transform-origin: center 155px;
+            -o-transform-origin: center 155px;
+            -ms-transform-origin: center 155px;
+            transform-origin: center 155px; /* height-10设置旋转元素的基点位置*/
+        }
+        /*设置时钟的分针样式*/
+        .m {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-left: -2px;
+            margin-top: -195px;
+            width: 4px;
+            height: 205px; /**/
+            background-color: #666;
+            z-index: 9;
+            -webkit-transform-origin: center 195px;
+            -moz-transform-origin: center 195px;
+            -o-transform-origin: center 195px;
+            -ms-transform-origin: center 195px;
+            transform-origin: center 195px; /* height-20*/
+        }
+        /*设置时钟的秒针样式*/
+        .s {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-left: -1px;
+            margin-top: -235px;
+            width: 2px;
+            height: 245px; /**/
+            background-color: #999;
+            z-index: 8;
+            -webkit-transform-origin: center 235px;
+            -moz-transform-origin: center 235px;
+            -o-transform-origin: center 235px;
+            -ms-transform-origin: center 235px;
+            transform-origin: center 235px; /*height-10*/
+        }
+        .dot_box {
+            width: 160px;
+            height: 160px;
+        }
+        /*时钟数*/
+        .dot {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 494px;
+            height: 494px;
+            margin-left: -247px;
+            margin-top: -247px;
+            background-color: #FFF;
+            -webkit-border-radius: 247px;
+            -moz-border-radius: 247px;
+            -o-border-radius: 247px;
+            -ms-border-radius: 247px;
+            border-radius: 247px;
+        }
+        .nowtime {
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -55px;
+            margin-top: 0px;
+            font-size:30px
+        }
+        .weekday {
+            position:absolute;
+            top: 108%;
+            left: 50%;
+            margin-left: -40px;
+            margin-top: 0px;
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+    <div id="clock" class="clock">
+        <div id="minutes" class="minutes"></div>
+        <div id="hours" class="hours"></div>
+        <div id="hms" class="hms">
+            <div id="h" class="h"></div>
+            <div id="m" class="m"></div>
+            <div id="s" class="s"></div>
+        </div>
+        <div id="nowtime" class="nowtime">
+            12:30:30
+        </div>
+         <div id="weekday" class="weekday">
+            星期四
+        </div>
+    </div>
+    
+    <script type="text/javascript">
+        window.onload = function () {
+            var oMinutes = $('minutes');/*获取元素*/
+            var oHours = $('hours');
+            var oH = $('h');
+            var oM = $('m');
+            var oS = $('s');
+            var oT = $('nowtime');
+            var oW = $('weekday');
+            var timer = null;
+            var i = 0;
+
+            //console.time('hello')、    
+
+            //创建分针格，每格的角度为(360/60)deg
+            for (i = 0; i < 30; i++) {
+                var aMinutes = document.createElement('div');
+
+                aMinutes.style.cssText = 'position:absolute; top:50%; left:50%; width:2px; background-color:#ccc; height:100%; margin-top:-50%; margin-left:-1px; -webkit-transform: rotate(' + ((i + 1) * 6) + 'deg); -moz-transform: rotate(' + ((i + 1) * 6) + 'deg); -o-transform: rotate(' + ((i + 1) * 6) + 'deg); -ms-transform: rotate(' + ((i + 1) * 6) + 'deg); transform: rotate(' + ((i + 1) * 6) + 'deg);';
+
+                if ((i + 1) % 5 == 0) {
+                    aMinutes.style.width = '4px';
+                    aMinutes.style.marginLeft = '-2px';
+                }
+                oMinutes.appendChild(aMinutes);
+            }
+
+            //创建时针格，每格的角度为(360/12)deg
+            for (i = 0; i < 12; i++) {
+                var aHours = document.createElement('div');
+                aHours.style.cssText = 'position:absolute; top:50%; left:50%; width:4px; background-color:#ccc; ' +
+                    'height:100%; margin-top:-50%; margin-left:-2px; -webkit-transform: rotate(' + ((i + 1) * 30) + 'deg);' +
+                    ' -moz-transform: rotate(' + ((i + 1) * 30) + 'deg); -o-transform: rotate(' + ((i + 1) * 30) + 'deg); ' +
+                    '-ms-transform: rotate(' + ((i + 1) * 30) + 'deg); transform: rotate(' + ((i + 1) * 30) + 'deg);';
+                oHours.appendChild(aHours);
+
+            }
+
+            timer = setInterval(getTimes, 1000)//设置一个定时器，每秒钟获取一次系统时间，然后设置，时分秒针的位置
+            function dateFtt(fmt, date) { //author: meizz   
+                var o = {
+                    "M+": date.getMonth() + 1,                 //月份   
+                    "d+": date.getDate(),                    //日   
+                    "h+": date.getHours(),                   //小时   
+                    "m+": date.getMinutes(),                 //分   
+                    "s+": date.getSeconds(),                 //秒   
+                    "q+": Math.floor((date.getMonth() + 3) / 3), //季度   
+                    "S": date.getMilliseconds()             //毫秒   
+                };
+                if (/(y+)/.test(fmt))
+                    fmt = fmt.replace(RegExp.$1, (date.getFullYear() + "").substr(4 - RegExp.$1.length));
+                for (var k in o)
+                    if (new RegExp("(" + k + ")").test(fmt))
+                        fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
+                return fmt;
+            }
+
+            function getTimes() {
+
+                var oDate = new Date();
+
+                oH.style.cssText = '-webkit-transform: rotate(' + (oDate.getHours() % 12) * 30 + 'deg); -moz-transform: rotate(' + (oDate.getHours() % 12) * 30 + 'deg); -o-transform: rotate(' + (oDate.getHours() % 12) * 30 + 'deg); -ms-transform: rotate(' + (oDate.getHours() % 12) * 30 + 'deg); transform: rotate(' + (oDate.getHours() % 12) * 30 + 'deg);'
+
+                oM.style.cssText = '-webkit-transform: rotate(' + (oDate.getMinutes() % 60) * 6 + 'deg); -moz-transform: rotate(' + (oDate.getMinutes() % 60) * 6 + 'deg); -o-transform: rotate(' + (oDate.getMinutes() % 60) * 6 + 'deg); -ms-transform: rotate(' + (oDate.getMinutes() % 60) * 6 + 'deg); transform: rotate(' + (oDate.getMinutes() % 60) * 6 + 'deg);'
+
+                oS.style.cssText = '-webkit-transform: rotate(' + (oDate.getSeconds() % 60) * 6 + 'deg); -moz-transform: rotate(' + (oDate.getSeconds() % 60) * 6 + 'deg); -o-transform: rotate(' + (oDate.getSeconds() % 60) * 6 + 'deg); -ms-transform: rotate(' + (oDate.getSeconds() % 60) * 6 + 'deg); transform: rotate(' + (oDate.getSeconds() % 60) * 6 + 'deg);'
+                
+                oT.innerHTML = dateFtt("hh:mm:ss", oDate);
+                var weekday = ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"];
+                oW.innerHTML = weekday[oDate.getDay()];
+            }
+
+            getTimes()//给表针一个初始值，防止刚打开，或刷新页面时，时，分，秒针归零
+
+            //console.timeEnd('hello')
+
+        }
+
+        function $(id) {
+            return typeof id === 'string' ? document.getElementById(id) : id;
+        }
+    </script>
+
+</body>
+</html>
